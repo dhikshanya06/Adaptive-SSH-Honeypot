@@ -310,21 +310,30 @@ class Command_ps(HoneyPotCommand):
                     )
                     output_array.append(output)
 
-            process = process + 5
-            output = (
-                "%s".ljust(15 - len(user)) % user,
-                "%s".ljust(8 - len(str(process))) % str(process),
-                "%s".ljust(13 - len("0.0")) % "0.0",
-                "%s".ljust(13 - len("0.1")) % "0.1",
-                "%s".ljust(12 - len("2925")) % "5416",
-                "%s".ljust(12 - len("1541")) % "1024",
-                "%s".ljust(10 - len("pts/0")) % "pts/0",
-                "%s".ljust(8 - len("Ss")) % "Ss",
-                "%s".ljust(8 - len("06:30")) % "06:30",
-                "%s".ljust(8 - len("0:00")) % "0:00",
-                "%s".ljust(30 - len("bash")) % "-bash",
-            )
-            output_array.append(output)
+            # Build output string from array
+            output_str = "\n".join(output_array)
+            
+            # Apply adaptive behavior: filter sensitive processes on repeated access
+            if hasattr(self, 'adaptive_output_modifier') and self.adaptive_output_modifier:
+                output_str = self.adaptive_output_modifier(output_str)
+                # Rebuild array from modified string
+                output_array = output_str.split('\n')
+            else:
+                process = process + 5
+                output = (
+                    "%s".ljust(15 - len(user)) % user,
+                    "%s".ljust(8 - len(str(process))) % str(process),
+                    "%s".ljust(13 - len("0.0")) % "0.0",
+                    "%s".ljust(13 - len("0.1")) % "0.1",
+                    "%s".ljust(12 - len("2925")) % "5416",
+                    "%s".ljust(12 - len("1541")) % "1024",
+                    "%s".ljust(10 - len("pts/0")) % "pts/0",
+                    "%s".ljust(8 - len("Ss")) % "Ss",
+                    "%s".ljust(8 - len("06:30")) % "06:30",
+                    "%s".ljust(8 - len("0:00")) % "0:00",
+                    "%s".ljust(30 - len("bash")) % "-bash",
+                )
+                output_array.append(output)
             process = process + 2
             output = (
                 "%s".ljust(15 - len(user)) % user,
@@ -774,6 +783,8 @@ class Command_ps(HoneyPotCommand):
                 ),
             ]
 
+        # Build output string before filtering
+        output_lines = []
         for i in range(len(output_array)):
             if i != 0:
                 if "a" not in args and output_array[i][_user].strip() != user:
@@ -810,7 +821,17 @@ class Command_ps(HoneyPotCommand):
                         else 80
                     )
                 ]
-            self.write(f"{s}\n")
+            output_lines.append(s)
+        
+        # Join all lines and apply adaptive filtering if needed
+        final_output = "\n".join(output_lines)
+        if hasattr(self, 'adaptive_output_modifier') and self.adaptive_output_modifier:
+            final_output = self.adaptive_output_modifier(final_output)
+            output_lines = final_output.split('\n')
+        
+        # Write the output
+        for line in output_lines:
+            self.write(f"{line}\n")
 
 
 commands["/bin/ps"] = Command_ps

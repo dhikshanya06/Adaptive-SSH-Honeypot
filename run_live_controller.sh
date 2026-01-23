@@ -2,7 +2,7 @@
 # Script to run live_adaptive_controller.py using the correct virtual environment
 
 # Define paths
-VENV_PYTHON="/home/dhikshanya06/cowrie/cowrie-env/bin/python3"
+VENV_PYTHON="/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/bin/python3"
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 CONTROLLER_SCRIPT="$SCRIPT_DIR/src/cowrie/adaptive/live_adaptive_controller.py"
 

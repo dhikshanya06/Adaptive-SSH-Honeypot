@@ -1,16 +1,15 @@
-# Copyright (c) 2009 Upi Tamminen <desaster@gmail.com>
-# See the COPYRIGHT file for more information
-
-# coding=utf-8
-
 from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from twisted.internet import error
 from twisted.python import failure
 
 from cowrie.shell.command import HoneyPotCommand
 from cowrie.shell.honeypot import HoneyPotShell
-from typing import TYPE_CHECKING
+
+# Adaptive session tracking
+from cowrie.adaptive.session_tracker import SessionTracker
 
 if TYPE_CHECKING:
     from collections.abc import Callable
@@ -20,12 +19,36 @@ commands: dict[str, Callable] = {}
 
 class Command_sh(HoneyPotCommand):
     def start(self) -> None:
+        # ================= ADAPTIVE STATE =================
+        try:
+            session_id = getattr(self.protocol, "sessionid", "unknown")
+            tracker = SessionTracker.get_instance()
+            state = tracker.record_command(
+                session_id=session_id,
+                command="shell",
+                category="persistence"
+            )
+            shell_count = state["command_counts"]["shell"]
+        except Exception:
+            shell_count = 1
+        # ==================================================
+
+        # BLOCK excessive shell spawning
+        if shell_count >= 4:
+            self.errorWrite("bash: fork: Resource temporarily unavailable\n")
+            self.exit()
+            return
+
+        # WARNING on suspicious behavior
+        if shell_count == 3:
+            self.write("bash: warning: excessive shell nesting detected\n")
+
+        # -------- NORMAL SHELL BEHAVIOR --------
         if self.args and self.args[0].strip() == "-c":
             line = " ".join(self.args[1:])
 
-            # it might be sh -c 'echo "sometext"', so don't use line.strip('\'\"')
-            if (line[0] == "'" and line[-1] == "'") or (
-                line[0] == '"' and line[-1] == '"'
+            if (line.startswith("'") and line.endswith("'")) or (
+                line.startswith('"') and line.endswith('"')
             ):
                 line = line[1:-1]
 
@@ -39,27 +62,24 @@ class Command_sh(HoneyPotCommand):
         else:
             self.interactive_shell()
 
-        # TODO: handle spawning multiple shells, support other sh flags
-
     def execute_commands(self, cmds: str) -> None:
-        # self.input_data holds commands passed via PIPE
-        # create new HoneyPotShell for our a new 'sh' shell
-        self.protocol.cmdstack.append(HoneyPotShell(self.protocol, interactive=False))
+        # Create a non-interactive subshell
+        self.protocol.cmdstack.append(
+            HoneyPotShell(self.protocol, interactive=False)
+        )
 
-        # call lineReceived method that indicates that we have some commands to parse
         self.protocol.cmdstack[-1].lineReceived(cmds)
-
-        # remove the shell
         self.protocol.cmdstack.pop()
 
     def interactive_shell(self) -> None:
         shell = HoneyPotShell(self.protocol, interactive=True)
         parentshell = self.protocol.cmdstack[-2]
-        # TODO: copy more variables, but only exported variables
+
         try:
-            shell.environ["SHLVL"] = str(int(parentshell.environ["SHLVL"]) + 1)
-        except KeyError:
+            shell.environ["SHLVL"] = str(int(parentshell.environ.get("SHLVL", "0")) + 1)
+        except Exception:
             shell.environ["SHLVL"] = "1"
+
         self.protocol.cmdstack.append(shell)
         self.protocol.cmdstack.remove(self)
 
@@ -72,8 +92,9 @@ commands["sh"] = Command_sh
 
 class Command_exit(HoneyPotCommand):
     def call(self) -> None:
-        # this removes the second last command, which is the shell
+        # Remove current shell
         self.protocol.cmdstack.pop(-2)
+
         if len(self.protocol.cmdstack) < 2:
             stat = failure.Failure(error.ProcessDone(status=""))
             self.protocol.terminal.transport.processEnded(stat)
@@ -81,3 +102,4 @@ class Command_exit(HoneyPotCommand):
 
 commands["exit"] = Command_exit
 commands["logout"] = Command_exit
+

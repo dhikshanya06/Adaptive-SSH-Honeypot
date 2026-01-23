@@ -1,4 +1,4 @@
-#!/home/dhikshanya06/cowrie/cowrie-env/bin/python3
+#!/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/bin/python3
 import sys
 from twisted.application.twist._twist import Twist
 if __name__ == '__main__':

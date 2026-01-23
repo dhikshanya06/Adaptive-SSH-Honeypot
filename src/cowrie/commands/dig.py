@@ -37,6 +37,13 @@ class Command_dig(HoneyPotCommand):
         return bool(domain_regex.match(domain))
 
     def start(self):
+        # Apply adaptive behavior first
+        self._apply_adaptive_behavior()
+        
+        # Check if command was blocked by adaptive behavior
+        if hasattr(self, 'adaptive_behavior') and self.adaptive_behavior and self.adaptive_behavior.get('block', False):
+            return  # Already handled in _apply_adaptive_behavior
+        
         if not self.args:
             self.write("usage: dig <hostname>\n")
             self.exit()

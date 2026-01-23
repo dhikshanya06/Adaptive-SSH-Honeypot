@@ -1,0 +1,374 @@
+{"timestamp": "2026-01-13T16:58:19.614265", "session": "3e0bbfbe55da", "command": "pwd", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T16:58:20.843483", "session": "3e0bbfbe55da", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T16:58:23.692039", "session": "3e0bbfbe55da", "command": "whoami", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T16:58:26.073081", "session": "3e0bbfbe55da", "command": "uname -a", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.67220761279803, "blocked": false}
+{"timestamp": "2026-01-13T17:00:50.877959", "session": "3e0bbfbe55da", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.5790799497441794, "blocked": false}
+{"timestamp": "2026-01-13T17:01:20.212705", "session": "3e0bbfbe55da", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T17:14:39.603003", "session": "ea3a2a21aaec", "command": "pwd", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:14:41.251127", "session": "ea3a2a21aaec", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:14:43.322096", "session": "ea3a2a21aaec", "command": "whoami", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:14:46.943260", "session": "ea3a2a21aaec", "command": "uname -a", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.3792777985541156, "blocked": false}
+{"timestamp": "2026-01-13T17:15:05.950743", "session": "ea3a2a21aaec", "command": "wget http://x", "category": "download_malware", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:15:08.588150", "session": "ea3a2a21aaec", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.1825892994658813, "blocked": false}
+{"timestamp": "2026-01-13T17:15:28.845256", "session": "ea3a2a21aaec", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.8931988125117656, "blocked": false}
+{"timestamp": "2026-01-13T17:15:34.059632", "session": "ea3a2a21aaec", "command": "ls", "category": "reconnaissance", "count": 7, "policy": "DELAYED", "delay": 1.7447175945785445, "blocked": false}
+{"timestamp": "2026-01-13T17:15:39.620161", "session": "ea3a2a21aaec", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T17:15:48.413283", "session": "cac5491cc4ab", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:15:50.437504", "session": "cac5491cc4ab", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:15:50.870988", "session": "cac5491cc4ab", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:15:51.239948", "session": "cac5491cc4ab", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.7189780310650267, "blocked": false}
+{"timestamp": "2026-01-13T17:15:54.955262", "session": "cac5491cc4ab", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.653117883304766, "blocked": false}
+{"timestamp": "2026-01-13T17:15:59.744359", "session": "cac5491cc4ab", "command": "pwd", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.560860093474837, "blocked": false}
+{"timestamp": "2026-01-13T17:16:03.786059", "session": "cac5491cc4ab", "command": "whoami", "category": "reconnaissance", "count": 7, "policy": "DELAYED", "delay": 1.9021202238730215, "blocked": false}
+{"timestamp": "2026-01-13T17:16:23.454988", "session": "cac5491cc4ab", "command": "ls", "category": "reconnaissance", "count": 8, "policy": "DELAYED", "delay": 1.3561630147185726, "blocked": false}
+{"timestamp": "2026-01-13T17:16:29.358575", "session": "cac5491cc4ab", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T17:24:23.694678", "session": "fdf4d004c2c0", "command": "pwd", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:24:26.371185", "session": "fdf4d004c2c0", "command": "whoami", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:24:31.981691", "session": "fdf4d004c2c0", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:24:33.851506", "session": "fdf4d004c2c0", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.8065027999271255, "blocked": false}
+{"timestamp": "2026-01-13T17:24:57.805232", "session": "fdf4d004c2c0", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.2988326694074503, "blocked": false}
+{"timestamp": "2026-01-13T17:25:05.338810", "session": "fdf4d004c2c0", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.830513165772977, "blocked": false}
+{"timestamp": "2026-01-13T17:25:11.230366", "session": "fdf4d004c2c0", "command": "ls", "category": "reconnaissance", "count": 7, "policy": "DELAYED", "delay": 1.550881916581056, "blocked": false}
+{"timestamp": "2026-01-13T17:25:15.615388", "session": "fdf4d004c2c0", "command": "ls", "category": "reconnaissance", "count": 8, "policy": "DELAYED", "delay": 1.0929144232666097, "blocked": false}
+{"timestamp": "2026-01-13T17:25:40.066660", "session": "fdf4d004c2c0", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T17:25:51.693241", "session": "5ea436d188f7", "command": "pwd", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:25:53.795250", "session": "5ea436d188f7", "command": "whoami", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:25:55.275018", "session": "5ea436d188f7", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:25:56.293606", "session": "5ea436d188f7", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.3614808811317394, "blocked": false}
+{"timestamp": "2026-01-13T17:26:00.736157", "session": "5ea436d188f7", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.4254631046245385, "blocked": false}
+{"timestamp": "2026-01-13T17:26:05.541833", "session": "5ea436d188f7", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.6366188562855708, "blocked": false}
+{"timestamp": "2026-01-13T17:26:09.983370", "session": "5ea436d188f7", "command": "ls", "category": "reconnaissance", "count": 7, "policy": "DELAYED", "delay": 1.752940517559874, "blocked": false}
+{"timestamp": "2026-01-13T17:26:28.412389", "session": "5ea436d188f7", "command": "cat /etc/passwd", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:26:31.508819", "session": "5ea436d188f7", "command": "cat /etc/passwd", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:26:55.798211", "session": "5ea436d188f7", "command": "touch test.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:27:08.656323", "session": "5ea436d188f7", "command": "touch test2.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-13T17:35:05.625472", "session": "21500d39f5d2", "command": "pwd", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:35:07.583089", "session": "21500d39f5d2", "command": "whoami", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:35:08.459182", "session": "21500d39f5d2", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:35:14.128574", "session": "21500d39f5d2", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.1561663689255575, "blocked": false}
+{"timestamp": "2026-01-13T17:35:28.094816", "session": "21500d39f5d2", "command": "sudo ls", "category": "privilege_escalation", "count": 1, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:35:32.336612", "session": "21500d39f5d2", "command": "sudo la", "category": "privilege_escalation", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:35:35.686753", "session": "21500d39f5d2", "command": "sudo ls", "category": "privilege_escalation", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:02.379479", "session": "21500d39f5d2", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.409373", "session": "529cc29b6696", "command": "pwd", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.412468", "session": "529cc29b6696", "command": "whoami", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.413334", "session": "529cc29b6696", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.415240", "session": "529cc29b6696", "command": "sudo ls", "category": "privilege_escalation", "count": 1, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.416225", "session": "529cc29b6696", "command": "sudo ls", "category": "privilege_escalation", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.417211", "session": "529cc29b6696", "command": "sudo ls", "category": "privilege_escalation", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.418463", "session": "529cc29b6696", "command": "cat /etc/passwd", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.420116", "session": "529cc29b6696", "command": "cat /etc/passwd", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.421328", "session": "529cc29b6696", "command": "touch test.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:36:13.422477", "session": "529cc29b6696", "command": "touch test2.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-13T17:36:13.423404", "session": "529cc29b6696", "command": "ps", "category": "process_control", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:38:16.346113", "session": "546e01f0ea83", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:38:18.418243", "session": "546e01f0ea83", "command": "pwd", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:38:20.607816", "session": "546e01f0ea83", "command": "whoami", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:38:21.282186", "session": "546e01f0ea83", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.8103506298455385, "blocked": false}
+{"timestamp": "2026-01-13T17:38:27.832608", "session": "546e01f0ea83", "command": "sudo ls", "category": "privilege_escalation", "count": 1, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:38:37.803745", "session": "546e01f0ea83", "command": "sudo", "category": "privilege_escalation", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:38:39.515690", "session": "546e01f0ea83", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T17:52:21.446416", "session": "ca3df8c810a6", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:52:22.223531", "session": "ca3df8c810a6", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:52:23.011532", "session": "ca3df8c810a6", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:52:23.813188", "session": "ca3df8c810a6", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.2066834635868728, "blocked": false}
+{"timestamp": "2026-01-13T17:52:33.810709", "session": "ca3df8c810a6", "command": "sudo ls", "category": "privilege_escalation", "count": 1, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:52:36.981155", "session": "ca3df8c810a6", "command": "sudo ls", "category": "privilege_escalation", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:52:40.195044", "session": "ca3df8c810a6", "command": "sudo ls", "category": "privilege_escalation", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:52:54.701628", "session": "ca3df8c810a6", "command": "touch file1.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:52:58.929857", "session": "ca3df8c810a6", "command": "touch file2.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-13T17:53:14.363750", "session": "ca3df8c810a6", "command": "wget http://google.com -O file1", "category": "download_malware", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:54:03.850682", "session": "ca3df8c810a6", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T17:57:25.339912", "session": "b4e6fb066923", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:57:26.663720", "session": "b4e6fb066923", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:57:28.367640", "session": "b4e6fb066923", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:57:29.455353", "session": "b4e6fb066923", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.3845050745816425, "blocked": false}
+{"timestamp": "2026-01-13T17:57:39.661247", "session": "b4e6fb066923", "command": "sudo ls", "category": "privilege_escalation", "count": 1, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:57:54.697986", "session": "b4e6fb066923", "command": "sudo ls", "category": "privilege_escalation", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:57:56.908090", "session": "b4e6fb066923", "command": "sudo ls", "category": "privilege_escalation", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:58:19.947258", "session": "b4e6fb066923", "command": "touch file1.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:58:26.563269", "session": "b4e6fb066923", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.4539018721048211, "blocked": false}
+{"timestamp": "2026-01-13T17:58:32.798192", "session": "b4e6fb066923", "command": "touch file2.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-13T17:58:50.727876", "session": "b4e6fb066923", "command": "wget http://google.com -O file1", "category": "download_malware", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:59:05.914985", "session": "b4e6fb066923", "command": "wget http://google.com -O file2", "category": "download_malware", "count": 2, "policy": "NEUTRALIZED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T17:59:22.568339", "session": "b4e6fb066923", "command": "ls -l file1 file2", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.9055358824492505, "blocked": false}
+{"timestamp": "2026-01-13T17:59:43.766511", "session": "b4e6fb066923", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T18:00:59.235308", "session": "7c53d900a7ae", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:01:00.584354", "session": "7c53d900a7ae", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:01:01.693887", "session": "7c53d900a7ae", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:01:02.998778", "session": "7c53d900a7ae", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.670640223254016, "blocked": false}
+{"timestamp": "2026-01-13T18:01:15.142171", "session": "7c53d900a7ae", "command": "sudo ls", "category": "privilege_escalation", "count": 1, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:01:45.405236", "session": "7c53d900a7ae", "command": "touch file1.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:01:49.638649", "session": "7c53d900a7ae", "command": "touch file2.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-13T18:02:01.903316", "session": "7c53d900a7ae", "command": "wget http://google.com -O file1", "category": "download_malware", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:04:55.583534", "session": "7c53d900a7ae", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T18:42:24.372446", "session": "363e13d6605d", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:42:31.664088", "session": "5eb57580c000", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:42:37.754771", "session": "18ef2ae20568", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:59:21.963487", "session": "00fae9222fe0", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T18:59:27.116958", "session": "8918c33cb077", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:08:10.881212", "session": "98b823c41223", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:10:11.998527", "session": "4cba46d64dca", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:10:11.998874", "session": "4cba46d64dca", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:10:23.304327", "session": "4cba46d64dca", "command": "whoami", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:10:24.983384", "session": "4cba46d64dca", "command": "pwd", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.517380530227093, "blocked": false}
+{"timestamp": "2026-01-13T19:10:29.710507", "session": "4cba46d64dca", "command": "uname", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.5852318251117077, "blocked": false}
+{"timestamp": "2026-01-13T19:10:31.301333", "session": "4cba46d64dca", "command": "df", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.0719864193544506, "blocked": false}
+{"timestamp": "2026-01-13T19:10:33.415776", "session": "4cba46d64dca", "command": "ls", "category": "reconnaissance", "count": 7, "policy": "DELAYED", "delay": 1.7391387855642069, "blocked": false}
+{"timestamp": "2026-01-13T19:10:35.157275", "session": "4cba46d64dca", "command": "ls", "category": "reconnaissance", "count": 8, "policy": "DELAYED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:10:38.149092", "session": "4cba46d64dca", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T19:17:52.345132", "session": "6fffcfb24c60", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:17:52.345498", "session": "unknown", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:17:53.771135", "session": "6fffcfb24c60", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:17:53.771396", "session": "unknown", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:17:54.255590", "session": "6fffcfb24c60", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:17:54.255975", "session": "unknown", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:17:56.833551", "session": "6fffcfb24c60", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.997874415161318, "blocked": false}
+{"timestamp": "2026-01-13T19:17:58.834103", "session": "unknown", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:23:51.653481", "session": "7b74aee15b28", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:23:52.705967", "session": "7b74aee15b28", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:23:53.424725", "session": "7b74aee15b28", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:23:54.142865", "session": "7b74aee15b28", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.0184092813595185, "blocked": false}
+{"timestamp": "2026-01-13T19:23:57.405473", "session": "7b74aee15b28", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.8684812950906655, "blocked": false}
+{"timestamp": "2026-01-13T19:34:01.913160", "session": "1c627411e79a", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:34:02.655524", "session": "1c627411e79a", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:34:03.265704", "session": "1c627411e79a", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T19:34:04.117753", "session": "1c627411e79a", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.522100354522959, "blocked": false}
+{"timestamp": "2026-01-13T19:34:08.972457", "session": "1c627411e79a", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.9084415208668988, "blocked": false}
+{"timestamp": "2026-01-13T19:35:21.659593", "session": "1c627411e79a", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T20:28:50.690516", "session": "6a7674e34a6f", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:28:51.763607", "session": "6a7674e34a6f", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:28:53.688857", "session": "6a7674e34a6f", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:28:55.733758", "session": "6a7674e34a6f", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.7347490726486101, "blocked": false}
+{"timestamp": "2026-01-13T20:29:59.158040", "session": "6a7674e34a6f", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T20:37:48.016105", "session": "5823d1253484", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:37:49.877321", "session": "5823d1253484", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:37:54.954867", "session": "5823d1253484", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:50:22.876244", "session": "123cc4e0bfbd", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:50:27.204996", "session": "123cc4e0bfbd", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:50:29.869439", "session": "123cc4e0bfbd", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T20:53:07.857786", "session": "123cc4e0bfbd", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T20:53:54.036622", "session": "3b97be7a8e68", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 3.5, "blocked": false}
+{"timestamp": "2026-01-13T21:04:29.835059", "session": "58e762924e03", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 3.5, "blocked": false}
+{"timestamp": "2026-01-13T21:05:22.174152", "session": "9743e85b66c3", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 3.5, "blocked": false}
+{"timestamp": "2026-01-13T21:07:15.333547", "session": "9743e85b66c3", "command": "exit", "category": "unknown_suspicious", "count": 2, "policy": "HIGH_RISK", "delay": 4.0, "blocked": false}
+{"timestamp": "2026-01-13T21:07:22.208868", "session": "9743e85b66c3", "command": "exit", "category": "unknown_suspicious", "count": 3, "policy": "HIGH_RISK", "delay": 4.5, "blocked": false}
+{"timestamp": "2026-01-13T21:07:28.756837", "session": "9743e85b66c3", "command": "exit", "category": "unknown_suspicious", "count": 4, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T21:07:46.373443", "session": "fc59f5c79e90", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T21:07:48.415744", "session": "fc59f5c79e90", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T21:08:04.492270", "session": "fc59f5c79e90", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T21:08:35.406150", "session": "fc59f5c79e90", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.4348703605867748, "blocked": false}
+{"timestamp": "2026-01-13T21:09:30.819099", "session": "fc59f5c79e90", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-13T21:11:44.564290", "session": "29c0c2c21ac5", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T21:11:45.445480", "session": "29c0c2c21ac5", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T21:11:46.260491", "session": "29c0c2c21ac5", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-13T21:11:46.917035", "session": "29c0c2c21ac5", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.044468877489647, "blocked": false}
+{"timestamp": "2026-01-13T21:11:49.452861", "session": "29c0c2c21ac5", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.5203150015323792, "blocked": false}
+{"timestamp": "2026-01-15T16:34:17.952564", "session": "7c4475c7304b", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-15T16:34:19.114612", "session": "7c4475c7304b", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-15T16:34:19.968705", "session": "7c4475c7304b", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-15T16:34:20.927499", "session": "7c4475c7304b", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.9701989924161873, "blocked": false}
+{"timestamp": "2026-01-15T16:34:43.955646", "session": "7c4475c7304b", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-20T14:45:30.425887", "session": "0caa1dc68e82", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-20T14:45:31.892289", "session": "0caa1dc68e82", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-20T14:45:32.539241", "session": "0caa1dc68e82", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-20T14:45:33.327738", "session": "0caa1dc68e82", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.3944168321724684, "blocked": false}
+{"timestamp": "2026-01-20T14:59:17.782787", "session": "b465db7e26f0", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-20T14:59:20.363423", "session": "b465db7e26f0", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-20T14:59:20.979872", "session": "b465db7e26f0", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-20T14:59:21.463320", "session": "b465db7e26f0", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.9214053864511396, "blocked": false}
+{"timestamp": "2026-01-20T14:59:25.079920", "session": "b465db7e26f0", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.107166883512788, "blocked": false}
+{"timestamp": "2026-01-20T14:59:36.275073", "session": "b465db7e26f0", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-20T14:59:48.425820", "session": "b465db7e26f0", "command": "exit", "category": "unknown_suspicious", "count": 2, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-20T15:00:45.180519", "session": "b465db7e26f0", "command": "exit", "category": "unknown_suspicious", "count": 3, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T13:41:57.488855", "session": "55c0e2be56d8", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T13:41:58.339954", "session": "55c0e2be56d8", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T13:41:58.921726", "session": "55c0e2be56d8", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T13:41:59.503111", "session": "55c0e2be56d8", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.0046493661375573, "blocked": false}
+{"timestamp": "2026-01-21T13:42:02.153690", "session": "55c0e2be56d8", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.5571732563446168, "blocked": false}
+{"timestamp": "2026-01-21T13:43:12.544217", "session": "55c0e2be56d8", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T17:33:20.683021", "session": "66fb544580bd", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:33:21.249411", "session": "66fb544580bd", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:33:35.881024", "session": "66fb544580bd", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:33:48.089939", "session": "66fb544580bd", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.6418036983375561, "blocked": false}
+{"timestamp": "2026-01-21T17:35:18.247365", "session": "66fb544580bd", "command": "chmod 777 README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:40:29.638107", "session": "14dab4413a9f", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:40:50.011175", "session": "14dab4413a9f", "command": "chmod 777 README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:40:55.878765", "session": "14dab4413a9f", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 4.5, "blocked": false}
+{"timestamp": "2026-01-21T17:42:15.340035", "session": "19ab181d08d2", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:46:45.387497", "session": "43a9760b4c0b", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:46:51.131891", "session": "43a9760b4c0b", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:46:51.683525", "session": "43a9760b4c0b", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:46:52.436718", "session": "43a9760b4c0b", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.8658469236057957, "blocked": false}
+{"timestamp": "2026-01-21T17:46:55.492759", "session": "43a9760b4c0b", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.9214504838948674, "blocked": false}
+{"timestamp": "2026-01-21T17:46:59.160233", "session": "43a9760b4c0b", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.6906879998808, "blocked": false}
+{"timestamp": "2026-01-21T17:48:39.498836", "session": "43a9760b4c0b", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T17:48:53.173981", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:48:53.817324", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:48:54.556788", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:48:55.235563", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.8778508884156184, "blocked": false}
+{"timestamp": "2026-01-21T17:48:58.239284", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.6618830260952664, "blocked": false}
+{"timestamp": "2026-01-21T17:49:00.816290", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.9903997994274214, "blocked": false}
+{"timestamp": "2026-01-21T17:49:03.752417", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 7, "policy": "DELAYED", "delay": 1.6024022911884552, "blocked": false}
+{"timestamp": "2026-01-21T17:49:06.272836", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 8, "policy": "DELAYED", "delay": 1.5791833059443627, "blocked": false}
+{"timestamp": "2026-01-21T17:49:08.615343", "session": "682929d2c12c", "command": "ls", "category": "reconnaissance", "count": 9, "policy": "DELAYED", "delay": 1.2667184611727302, "blocked": false}
+{"timestamp": "2026-01-21T17:49:34.339346", "session": "682929d2c12c", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T17:50:26.400099", "session": "5f157a1e576e", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:50:28.773031", "session": "5f157a1e576e", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:50:29.505688", "session": "5f157a1e576e", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:50:29.935860", "session": "5f157a1e576e", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.4812597614452516, "blocked": false}
+{"timestamp": "2026-01-21T17:50:31.423000", "session": "5f157a1e576e", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.7926008082526899, "blocked": false}
+{"timestamp": "2026-01-21T17:50:33.221762", "session": "5f157a1e576e", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.1666006923374512, "blocked": false}
+{"timestamp": "2026-01-21T17:50:40.566017", "session": "5f157a1e576e", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T17:51:00.568374", "session": "0ea7f07b9a6d", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:51:01.660878", "session": "0ea7f07b9a6d", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:51:02.325165", "session": "0ea7f07b9a6d", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:51:03.018847", "session": "0ea7f07b9a6d", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.9039748406852501, "blocked": false}
+{"timestamp": "2026-01-21T17:51:05.583535", "session": "0ea7f07b9a6d", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.5607689158662073, "blocked": false}
+{"timestamp": "2026-01-21T17:51:07.882559", "session": "0ea7f07b9a6d", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.5062285838298197, "blocked": false}
+{"timestamp": "2026-01-21T17:51:11.554459", "session": "0ea7f07b9a6d", "command": "ls -a", "category": "reconnaissance", "count": 7, "policy": "DELAYED", "delay": 1.0510330696260861, "blocked": false}
+{"timestamp": "2026-01-21T17:51:29.358646", "session": "0ea7f07b9a6d", "command": "ls", "category": "reconnaissance", "count": 8, "policy": "DELAYED", "delay": 1.3565471522951111, "blocked": false}
+{"timestamp": "2026-01-21T17:51:53.610097", "session": "0ea7f07b9a6d", "command": "chmod 777 README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T17:51:55.341093", "session": "0ea7f07b9a6d", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T20:06:44.008295", "session": "231e3ef634c5", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T20:06:45.046907", "session": "231e3ef634c5", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T20:06:45.564622", "session": "231e3ef634c5", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T20:06:46.529044", "session": "231e3ef634c5", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.1322131505867816, "blocked": false}
+{"timestamp": "2026-01-21T20:07:04.919777", "session": "231e3ef634c5", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:10:36.495601", "session": "8212d1579ea7", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:10:38.272308", "session": "8212d1579ea7", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:10:38.762167", "session": "8212d1579ea7", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:12:56.455936", "session": "8212d1579ea7", "command": "chmod 777 README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:12:56.458810", "session": "8212d1579ea7", "command": "echo 0", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:13:01.469327", "session": "8212d1579ea7", "command": "chmod 777 README.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-21T21:13:01.470621", "session": "8212d1579ea7", "command": "echo 0", "category": "unknown_suspicious", "count": 2, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:13:13.183802", "session": "8212d1579ea7", "command": "chmod 777 README.txt", "category": "file_modification", "count": 3, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-21T21:13:15.173126", "session": "8212d1579ea7", "command": "echo 0", "category": "unknown_suspicious", "count": 3, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:15:59.669511", "session": "5f738ddc985a", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:16:06.282715", "session": "9b06bf669ac4", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:17:52.916303", "session": "b348b71fbcbe", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:20:21.974871", "session": "18d094b73280", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:20:22.982389", "session": "18d094b73280", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:20:23.481197", "session": "18d094b73280", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:20:24.037059", "session": "18d094b73280", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.7861940678474106, "blocked": false}
+{"timestamp": "2026-01-21T21:20:27.424962", "session": "18d094b73280", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.897109238693989, "blocked": false}
+{"timestamp": "2026-01-21T21:20:31.166441", "session": "18d094b73280", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.3453556922158183, "blocked": false}
+{"timestamp": "2026-01-21T21:23:03.744775", "session": "18d094b73280", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:23:59.535446", "session": "f10bc9e1cf0a", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:24:08.153398", "session": "84b4b9079729", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:28:37.033035", "session": "2a6b2646af1b", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:28:38.460349", "session": "2a6b2646af1b", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:28:39.405575", "session": "2a6b2646af1b", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:28:40.212115", "session": "2a6b2646af1b", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.415911760793135, "blocked": false}
+{"timestamp": "2026-01-21T21:28:43.066242", "session": "2a6b2646af1b", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.7596131401448183, "blocked": false}
+{"timestamp": "2026-01-21T21:28:46.055635", "session": "2a6b2646af1b", "command": "ls", "category": "reconnaissance", "count": 6, "policy": "DELAYED", "delay": 1.3357203747402293, "blocked": false}
+{"timestamp": "2026-01-21T21:28:53.228075", "session": "2a6b2646af1b", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:28:57.742665", "session": "2a6b2646af1b", "command": "cat README.txt", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:28:59.219001", "session": "2a6b2646af1b", "command": "cat README.txt", "category": "file_access", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:29:00.173884", "session": "2a6b2646af1b", "command": "cat README.txt", "category": "file_access", "count": 4, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:29:01.030331", "session": "2a6b2646af1b", "command": "cat README.txt", "category": "file_access", "count": 5, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:30:41.855578", "session": "2a6b2646af1b", "command": "ls -a", "category": "reconnaissance", "count": 7, "policy": "DELAYED", "delay": 1.4667399834539854, "blocked": false}
+{"timestamp": "2026-01-21T21:31:40.012277", "session": "2a6b2646af1b", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:31:53.280142", "session": "e80afa9ec6bd", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:31:53.830093", "session": "e80afa9ec6bd", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:31:54.321727", "session": "e80afa9ec6bd", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:31:54.818787", "session": "e80afa9ec6bd", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.8394124712177427, "blocked": false}
+{"timestamp": "2026-01-21T21:31:58.863921", "session": "e80afa9ec6bd", "command": "ls -a", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.3215704899919627, "blocked": false}
+{"timestamp": "2026-01-21T21:32:11.238707", "session": "e80afa9ec6bd", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:32:18.658246", "session": "e80afa9ec6bd", "command": "cat .db_creds", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:32:24.885162", "session": "e80afa9ec6bd", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:32:35.402482", "session": "4e67311e19aa", "command": "ls -a", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:32:48.868482", "session": "4e67311e19aa", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:32:54.528791", "session": "4e67311e19aa", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 4.5, "blocked": false}
+{"timestamp": "2026-01-21T21:33:02.409010", "session": "49ca6cb39678", "command": "ls -a", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:33:08.850691", "session": "49ca6cb39678", "command": "cat .db_creds", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:33:17.272041", "session": "49ca6cb39678", "command": "cat .profile", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:33:33.273080", "session": "49ca6cb39678", "command": "chmod README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:33:41.649701", "session": "49ca6cb39678", "command": "chmod 777 README.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-21T21:33:44.956100", "session": "49ca6cb39678", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:16.271106", "session": "389603640c2c", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:17.008939", "session": "389603640c2c", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:17.501941", "session": "389603640c2c", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:29.315637", "session": "389603640c2c", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:30.585852", "session": "389603640c2c", "command": "cat README.txt", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:31.432659", "session": "389603640c2c", "command": "cat README.txt", "category": "file_access", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:32.126725", "session": "389603640c2c", "command": "cat README.txt", "category": "file_access", "count": 4, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:32.805707", "session": "389603640c2c", "command": "cat README.txt", "category": "file_access", "count": 5, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:37:33.440765", "session": "389603640c2c", "command": "cat README.txt", "category": "file_access", "count": 6, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:38:24.825777", "session": "389603640c2c", "command": "chmod 777 README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:38:34.045230", "session": "389603640c2c", "command": "chmod 444 README.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-21T21:38:36.847440", "session": "389603640c2c", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:43:57.553846", "session": "a34901807354", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:01.077451", "session": "a34901807354", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:07.687850", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:08.957633", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:09.784983", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:10.316278", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 4, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:10.788893", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 5, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:11.330342", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 6, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:11.782949", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 7, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:44:12.177578", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 8, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:45:22.494690", "session": "a34901807354", "command": "cat README.txt", "category": "file_access", "count": 9, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:45:24.477447", "session": "a34901807354", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-21T21:50:31.178530", "session": "3e3ab39c0ab7", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:50:32.663665", "session": "3e3ab39c0ab7", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:50:33.225325", "session": "3e3ab39c0ab7", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:50:35.268211", "session": "3e3ab39c0ab7", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.8436964210189657, "blocked": false}
+{"timestamp": "2026-01-21T21:50:46.799779", "session": "3e3ab39c0ab7", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:50:48.615786", "session": "3e3ab39c0ab7", "command": "cat README.txt", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:50:49.466946", "session": "3e3ab39c0ab7", "command": "cat README.txt", "category": "file_access", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T21:50:51.244426", "session": "3e3ab39c0ab7", "command": "cat README.txt", "category": "file_access", "count": 4, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:01:47.262222", "session": "04fdbd6048e9", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:01:48.015161", "session": "04fdbd6048e9", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:01:48.837600", "session": "04fdbd6048e9", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:01:56.162360", "session": "04fdbd6048e9", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:02:05.716454", "session": "04fdbd6048e9", "command": "cat README.txt", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:02:07.183284", "session": "04fdbd6048e9", "command": "cat README.txt", "category": "file_access", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:02:16.475799", "session": "04fdbd6048e9", "command": "chmod 421 README.TXT", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:02:22.988357", "session": "04fdbd6048e9", "command": "chmod 421 README.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-21T22:16:31.998613", "session": "23034d171c93", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:16:32.786156", "session": "23034d171c93", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:16:33.481938", "session": "23034d171c93", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:16:34.474297", "session": "23034d171c93", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.187110002068174, "blocked": false}
+{"timestamp": "2026-01-21T22:16:37.629320", "session": "23034d171c93", "command": "ls", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.9051331072169169, "blocked": false}
+{"timestamp": "2026-01-21T22:16:51.003154", "session": "23034d171c93", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:16:53.183664", "session": "23034d171c93", "command": "cat README.txt", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:17:00.335231", "session": "23034d171c93", "command": "cat README.txt", "category": "file_access", "count": 3, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:17:01.501215", "session": "23034d171c93", "command": "cat README.txt", "category": "file_access", "count": 4, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:17:02.146362", "session": "23034d171c93", "command": "cat README.txt", "category": "file_access", "count": 5, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:17:11.877396", "session": "23034d171c93", "command": "cat notes.txt", "category": "file_access", "count": 6, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:17:15.062382", "session": "23034d171c93", "command": "cat notes.txt", "category": "file_access", "count": 7, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:17:30.527969", "session": "23034d171c93", "command": "chmod 777 notes.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-21T22:17:33.928710", "session": "23034d171c93", "command": "chmod 777 notes.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-22T21:38:41.691420", "session": "eb6c1f4dcd36", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T21:38:43.042602", "session": "eb6c1f4dcd36", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T21:38:43.833657", "session": "eb6c1f4dcd36", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T21:38:44.835923", "session": "eb6c1f4dcd36", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.0572600048907979, "blocked": false}
+{"timestamp": "2026-01-22T21:38:48.432230", "session": "eb6c1f4dcd36", "command": "whoami", "category": "reconnaissance", "count": 5, "policy": "DELAYED", "delay": 1.038363790377479, "blocked": false}
+{"timestamp": "2026-01-22T21:39:05.737914", "session": "eb6c1f4dcd36", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-22T22:10:01.337625", "session": "b4184e5d905b", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:10:57.612913", "session": "b4184e5d905b", "command": "rm README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:11:06.007660", "session": "b4184e5d905b", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:15:21.395840", "session": "2d500b49685c", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:15:31.173485", "session": "2d500b49685c", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:16:17.618168", "session": "2d500b49685c", "command": "rm README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:16:20.339292", "session": "2d500b49685c", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:16:38.463733", "session": "2d500b49685c", "command": "uname", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:24:58.830777", "session": "acf2c14d6fc9", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:25:07.632530", "session": "acf2c14d6fc9", "command": "cat README.txt", "category": "file_access", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:25:12.929605", "session": "acf2c14d6fc9", "command": "rm README.txt", "category": "file_modification", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:25:14.998702", "session": "acf2c14d6fc9", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:25:18.971062", "session": "acf2c14d6fc9", "command": "cat README.txt", "category": "file_access", "count": 2, "policy": "RESTRICTED", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:25:21.995344", "session": "acf2c14d6fc9", "command": "rm README.txt", "category": "file_modification", "count": 2, "policy": "BLOCKED", "delay": 0, "blocked": true}
+{"timestamp": "2026-01-22T22:25:41.620509", "session": "acf2c14d6fc9", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-22T22:27:40.003576", "session": "8576c293ab53", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:27:41.594858", "session": "8576c293ab53", "command": "uname", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:27:43.082986", "session": "8576c293ab53", "command": "whoami", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:29:21.667088", "session": "8576c293ab53", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}
+{"timestamp": "2026-01-22T22:41:22.364103", "session": "cbdfef038087", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:41:26.075027", "session": "cbdfef038087", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 4.0, "blocked": false}
+{"timestamp": "2026-01-22T22:42:44.818091", "session": "787ae2412bae", "command": "ls", "category": "reconnaissance", "count": 1, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:42:45.438808", "session": "787ae2412bae", "command": "ls", "category": "reconnaissance", "count": 2, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:42:46.251232", "session": "787ae2412bae", "command": "ls", "category": "reconnaissance", "count": 3, "policy": "NORMAL", "delay": 0, "blocked": false}
+{"timestamp": "2026-01-22T22:42:47.872730", "session": "787ae2412bae", "command": "ls", "category": "reconnaissance", "count": 4, "policy": "DELAYED", "delay": 1.6232670888927525, "blocked": false}
+{"timestamp": "2026-01-22T22:42:54.247789", "session": "787ae2412bae", "command": "exit", "category": "unknown_suspicious", "count": 1, "policy": "HIGH_RISK", "delay": 5.0, "blocked": false}

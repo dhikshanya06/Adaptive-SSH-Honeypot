@@ -1,4 +1,4 @@
-#!/home/dhikshanya06/cowrie/cowrie-env/bin/python3
+#!/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/bin/python3
 import sys
 from incremental.update import _main
 if __name__ == '__main__':

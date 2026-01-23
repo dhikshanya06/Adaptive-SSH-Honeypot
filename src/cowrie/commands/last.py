@@ -1,49 +1,81 @@
-# Copyright (c) 2009 Upi Tamminen <desaster@gmail.com>
-# See the COPYRIGHT file for more information
-
-
 from __future__ import annotations
-
-import time
 
 from cowrie.shell.command import HoneyPotCommand
 
 commands = {}
 
 
-class Command_last(HoneyPotCommand):
+class Command_env(HoneyPotCommand):
+    """
+    Adaptive env command
+
+    Behavior:
+    - First call: minimal realistic environment (recon stage)
+    - Repeated calls or higher interaction level: richer environment
+    - High interaction level: deceptive production-like variables
+    """
+
     def call(self) -> None:
-        line = list(self.args)
-        while len(line):
-            arg = line.pop(0)
-            if not arg.startswith("-"):
-                continue
-            elif arg == "-n" and len(line) and line[0].isdigit():
-                line.pop(0)
+        # Track how many times env was executed in this session
+        if not hasattr(self.protocol, "_env_count"):
+            self.protocol._env_count = 0
+        self.protocol._env_count += 1
 
-        self.write(
-            "{:8s} {:12s} {:16s} {}   still logged in\n".format(
-                self.protocol.user.username,
-                "pts/0",
-                self.protocol.clientIP,
-                time.strftime(
-                    "%a %b %d %H:%M", time.localtime(self.protocol.logintime)
-                ),
+        # --------------------------------------------------
+        # BASE ENVIRONMENT (always shown)
+        # --------------------------------------------------
+        self.write("SHELL=/bin/bash\n")
+        self.write(f"TERM={self.environ.get('TERM', 'xterm')}\n")
+        self.write(f"USER={self.environ.get('USER', 'root')}\n")
+
+        # --------------------------------------------------
+        # STAGE 1: Initial Reconnaissance
+        # --------------------------------------------------
+        if self.protocol._env_count == 1 and self.interaction_level < 2:
+            self.write(
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\n"
             )
-        )
+            self.write(f"PWD={self.protocol.cwd}\n")
+            self.write("LANG=en_US.UTF-8\n")
+            self.write("SHLVL=1\n")
+            self.exit()
+            return
 
-        self.write("\n")
-        self.write(
-            "wtmp begins {}\n".format(
-                time.strftime(
-                    "%a %b %d %H:%M:%S %Y",
-                    time.localtime(
-                        self.protocol.logintime // (3600 * 24) * (3600 * 24) + 63
-                    ),
-                )
+        # --------------------------------------------------
+        # STAGE 2: Suspicious or Repeated Reconnaissance
+        # --------------------------------------------------
+        if self.interaction_level >= 2:
+            self.write(
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\n"
             )
-        )
+            self.write(f"PWD={self.protocol.cwd}\n")
+            self.write("LANG=en_US.UTF-8\n")
+            self.write("SHLVL=1\n")
+            self.write(f"HOME={self.environ.get('HOME', '/root')}\n")
+            self.write("APP_ENV=production\n")
+
+        # --------------------------------------------------
+        # STAGE 3: High-Risk Attacker (Deceptive Exposure)
+        # --------------------------------------------------
+        if self.interaction_level >= 3:
+            self.write("LOGNAME=root\n")
+            self.write(
+                f"SSH_CONNECTION={self.protocol.clientIP} "
+                f"{self.protocol.realClientPort} 192.168.1.100 22\n"
+            )
+            self.write("XDG_SESSION_ID=3\n")
+            self.write("XDG_RUNTIME_DIR=/run/user/0\n")
+
+            # Fake but realistic production secrets
+            self.write("DB_HOST=10.0.0.12\n")
+            self.write("DB_USER=admin\n")
+            self.write("DB_PASS=********\n")
+            self.write("AWS_REGION=us-east-1\n")
+            self.write("INTERNAL_API=http://10.0.0.25/api\n")
+
+        self.exit()
 
 
-commands["/usr/bin/last"] = Command_last
-commands["last"] = Command_last
+commands["/usr/bin/env"] = Command_env
+commands["env"] = Command_env
+

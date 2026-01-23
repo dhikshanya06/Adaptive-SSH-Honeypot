@@ -161,14 +161,24 @@ class Command_uname(HoneyPotCommand):
         output = []
 
         # Adaptive OS Info
-        # Level 1: Modern Ubuntu
-        # Level 2+: Older Debian 7 (EOL)
-        if self.interaction_level >= 2:
-            ver = "3.2.0-4-amd64"
-            build = "#1 SMP Debian 3.2.68-1+deb7u1"
+
+
+        # Level 1 (Low): Generic/Minimal Linux
+        # Level 1 (Low): Generic/Minimal Linux
+        # Level 2 (Medium): Interaction Detected - Slightly more specific
+        # Level 3 (High): Production Server - Specific customized kernel
+        if self.interaction_level >= 3:
+            ver = "4.19.0-17-amd64"
+            build = "#1 SMP Debian 4.19.194-2 (2021-06-21)"
             os_str = "GNU/Linux"
-            rel = "3.2.0-4-amd64"
+            rel = "4.19.0-17-amd64"
+        elif self.interaction_level == 2:
+            ver = "5.10.0-8-amd64"
+            build = "#1 SMP Debian 5.10.46-4 (2021-08-03)"
+            os_str = "GNU/Linux"
+            rel = "5.10.0-8-amd64"
         else:
+            # Level 1: Generic/Modern
             ver = "5.15.0-76-generic"
             build = "#101-Ubuntu SMP Tue Jun 14 13:33:21 UTC 2023"
             os_str = "GNU/Linux"

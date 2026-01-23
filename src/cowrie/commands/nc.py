@@ -114,6 +114,13 @@ class Command_nc(HoneyPotCommand):
         self.errorWrite("\tPort numbers can be individual or ranges: lo-hi [inclusive]\n")
 
     def start(self):
+        # Apply adaptive behavior first
+        self._apply_adaptive_behavior()
+        
+        # Check if command was blocked by adaptive behavior
+        if hasattr(self, 'adaptive_behavior') and self.adaptive_behavior and self.adaptive_behavior.get('block', False):
+            return  # Already handled in _apply_adaptive_behavior
+        
         try:
             _optlist, args = getopt.getopt(
                 self.args, "46CDdFhklNnrStUuvZzI:i:M:m:O:P:p:q:s:T:V:W:w:X:x:"

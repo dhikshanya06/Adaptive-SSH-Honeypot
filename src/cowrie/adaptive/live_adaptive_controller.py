@@ -1,141 +1,163 @@
-#!/home/dhikshanya06/cowrie/cowrie-env/bin/python3
+
 import json
 import time
-import datetime
 import os
 import sys
+import importlib.util
 
-# Add the adaptive directory to path so it can find its siblings
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# --- PATH SETUP ---
+# Ensure we can import from src
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, "../../.."))
+if project_root not in sys.path:
+    sys.path.append(project_root)
 
+# --- DYNAMIC IMPORTS (To match demo reliability) ---
 try:
-    from twisted.internet import reactor, task, defer
-    from session_analyzer import SessionAnalyzer
-    from rule_based_analyzer import RuleBasedAnalyzer
-    from llm_analyzer import LLMAnalyzer
-    from adaptive_controller import AdaptiveController
-    from behavior_logger import BehaviorLogger
-except ImportError as e:
-    print(f"\n[!] Error: Missing dependencies: {e}")
+    # 1. Session Collector
+    collector_path = os.path.join(project_root, "src/cowrie/adaptive/telemetry/session_collector.py")
+    spec = importlib.util.spec_from_file_location("session_collector", collector_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    SessionCollector = module.SessionCollector
+
+    # 2. Intent Reasoner
+    # We use the trick to ensure it finds build_index relative to itself if needed
+    reasoner_path = os.path.join(project_root, "src/cowrie/adaptive/llm/intent_reasoner.py")
+    spec = importlib.util.spec_from_file_location("intent_reasoner", reasoner_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    IntentReasoner = module.IntentReasoner
+
+    # 3. Policy Engine
+    policy_path = os.path.join(project_root, "src/cowrie/adaptive/policy/policy_engine.py")
+    spec = importlib.util.spec_from_file_location("policy_engine", policy_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    PolicyEngine = module.PolicyEngine
+
+except Exception as e:
+    print(f"CRITICAL IMPORT ERROR: {e}")
     sys.exit(1)
 
-# Determine the project root relative to this script
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..'))
-LOG_DIR = os.path.join(PROJECT_ROOT, 'var', 'log', 'adaptive')
+# --- PICKLE PATCH (Required for RAG loading) ---
+# Ensure SimpleRAGIndex matches the class path used during saving
+try:
+    build_index_path = os.path.join(project_root, "src/cowrie/adaptive/rag/build_index.py")
+    spec = importlib.util.spec_from_file_location("build_index", build_index_path)
+    build_index_module = importlib.util.module_from_spec(spec)
+    sys.modules["build_index"] = build_index_module
+    spec.loader.exec_module(build_index_module)
+    SimpleRAGIndex = build_index_module.SimpleRAGIndex
+    
+    # Inject into __main__ if needed for some unpicklers
+    import builtins
+    if not hasattr(builtins, "SimpleRAGIndex"):
+        setattr(builtins, "SimpleRAGIndex", SimpleRAGIndex)
+except Exception as e:
+    print(f"Warning: Could not patch pickle environment: {e}")
 
-class LiveAdaptiveController:
+# --- CONSTANTS ---
+LOG_FILE = os.path.join(project_root, "var/log/cowrie/cowrie.json")
+POLL_INTERVAL = 1.0
+
+class LiveController:
     def __init__(self):
-        self.s_analyzer = SessionAnalyzer()
-        self.rb_analyzer = RuleBasedAnalyzer()
-        self.llm_analyzer = LLMAnalyzer()
-        self.controller = AdaptiveController(self.rb_analyzer, self.llm_analyzer)
-        self.logger = BehaviorLogger(LOG_DIR)
-        self.session_event_counts = {}
+        self.reasoner = IntentReasoner()
+        self.policy_engine = PolicyEngine()
+        self.collectors = {} # session_id -> SessionCollector instance
+        self.processed_lines = 0
 
-    @defer.inlineCallbacks
-    def update(self):
-        if not os.path.exists(self.s_analyzer.log_path):
+    def get_collector(self, session_id):
+        if session_id not in self.collectors:
+            self.collectors[session_id] = SessionCollector(session_id)
+        return self.collectors[session_id]
+
+    def process_event(self, event):
+        session_id = event.get('session')
+        if not session_id:
             return
 
-        sessions = {}
-        with open(self.s_analyzer.log_path, 'r') as f:
-            for line in f:
-                try:
-                    event = json.loads(line)
-                    sid = event.get('session')
-                    if sid:
-                        if sid not in sessions:
-                            sessions[sid] = []
-                        sessions[sid].append(event)
-                except Exception:
-                    continue
+        collector = self.get_collector(session_id)
+        analyze_needed = False
 
-        if not sessions:
-            return
-
-        for session_id, events in sessions.items():
-            if len(events) == self.session_event_counts.get(session_id, 0):
-                continue
-            
-            print(f"[DEBUG] New events detected for session {session_id}. Processing...")
-            
-            try:
-                self.session_event_counts[session_id] = len(events)
-                summary = self.s_analyzer.summarize_session({'session_id': session_id, 'events': events})
-                decision = yield self.controller.decide_level(summary)
-                
-                level = decision['level']
-                reasoning = decision['reasoning']
-                llm_info = reasoning.get('llm_based', {})
-                
-                classification = 'MALICIOUS' if level >= 3 else ('SUSPICIOUS' if level == 2 else 'NORMAL')
-
-                # Prepare data for behavior logger
-                log_data = {
-                    "commands": summary.get('commands', []),
-                    "intent": llm_info.get('intent', 'Unknown'),
-                    "skill_level": llm_info.get('skill_level', 'Unknown'),
-                    "attack_stage": llm_info.get('attack_stage', 'Unknown'),
-                    "mitre_technique": llm_info.get('mitre_technique', 'N/A'),
-                    "summary": llm_info.get('summary', 'N/A'),
-                    "risk_score": reasoning.get('rule_based', {}).get('risk_score', 0)
-                }
-                
-                # Perform Adaptive Logging
-                self.logger.log_event(level, session_id, log_data)
-                
-                # Update Session Policy File for real-time adaptation
-                policy_file = os.path.join(PROJECT_ROOT, 'var', 'lib', 'cowrie', 'session_policies.json')
-                policies = {}
-                if os.path.exists(policy_file):
-                    try:
-                        with open(policy_file, 'r') as f:
-                            policies = json.load(f)
-                    except Exception:
-                        pass
-                
-                policies[str(session_id)] = {"level": level}
-                
-                # Ensure directory exists
-                os.makedirs(os.path.dirname(policy_file), exist_ok=True)
-                
-                with open(policy_file, 'w') as f:
-                    json.dump(policies, f)
-                
-                # Console output for visibility during demo
-                print("\n" + "="*50)
-                print(f"ADAPTIVE INTELLIGENCE FOR SESSION: {session_id}")
-                print(f"Detected Level : {level} ({classification})")
-                print(f"Intent         : {log_data['intent']}")
-                print(f"Skill Level    : {log_data['skill_level']}")
-                print(f"Attack Stage   : {log_data['attack_stage']}")
-                print(f"RAG Mapping    : {log_data['mitre_technique']}")
-                print(f"Summary        : {log_data['summary']}")
-                print(f"Status         : Policy Updated for Live Session")
-                print("="*50 + "\n")
-
-
-            except Exception as e:
-                print(f"[!] Error processing session {session_id}: {e}")
-
-
-    def run(self):
-        print("[*] Loop starting...")
+        # Parse Event Type
+        event_id = event.get('eventid')
+        if event_id == 'cowrie.command.input':
+            cmd = event.get('input')
+            collector.add_command(cmd)
+            analyze_needed = True
+            print(f"   [ACTIVITY] {session_id}: Command '{cmd}'")
         
-        # Catch up with existing logs to avoid replaying history
-        print("[*] Synchronizing with existing logs...")
-        sessions = self.s_analyzer.parse_logs()
-        self.session_event_counts = {}
-        for session_id, events in sessions.items():
-            self.session_event_counts[session_id] = len(events)
-        print(f"[*] Waiting for NEW activity...")
+        elif event_id == 'cowrie.session.file_download':
+            url = event.get('url')
+            collector.add_download(f"wget {url}") # Normalize for collector
+            analyze_needed = True
+            print(f"   [ACTIVITY] {session_id}: Download '{url}'")
 
-        # Poll every 1 second for better responsiveness
-        l = task.LoopingCall(self.update)
-        l.start(1.0)
-        reactor.run()
+        if analyze_needed:
+            self.analyze(session_id, collector)
+
+    def analyze(self, session_id, collector):
+        # Get Summary
+        summary_text = collector.get_text_summary()
+
+        # Call Brain
+        analysis = self.reasoner.analyze_session(summary_text) # This has the cache/overrides built-in now
+        
+        # Display Result
+        intent = analysis.get("intent", "unknown")
+        risk = analysis.get("risk", "low")
+        policy = analysis.get("policy", "passive_monitoring")
+
+        # Colorize
+        risks = {
+            "low": "\033[92mLOW\033[0m", 
+            "medium": "\033[93mMEDIUM\033[0m", 
+            "high": "\033[91mHIGH\033[0m",
+            "critical": "\033[41m\033[97mCRITICAL\033[0m",
+            "very high": "\033[35mVERY HIGH\033[0m"
+        }
+        risk_display = risks.get(risk.lower(), risk.upper())
+
+        print(f"   [BRAIN] Intent: {intent} | Risk: {risk_display} | Policy: {policy}")
+
+        # Update Policy Engine (which would theoretically talk to backend)
+        self.policy_engine.update_policy(session_id, analysis)
+
+        if risk.lower() in ["high", "critical", "very high"]:
+             print(f"   [!!!] ACTIVE DEFENSE TRIGGERED for {session_id}")
+        
+    def tail_log(self):
+        print(f"[*] Monitoring Log: {LOG_FILE}")
+        
+        if not os.path.exists(LOG_FILE):
+             print(f"[!] Warning: Log file not found at {LOG_FILE}. Waiting for it to appear...")
+
+        # Catch up to end of file
+        try:
+            with open(LOG_FILE, 'r') as f:
+                f.seek(0, 2) # Go to end
+                while True:
+                    line = f.readline()
+                    if not line:
+                        time.sleep(POLL_INTERVAL)
+                        continue
+                    
+                    try:
+                        event = json.loads(line)
+                        self.process_event(event)
+                    except json.JSONDecodeError:
+                        pass
+        except KeyboardInterrupt:
+            print("\n[*] Stopping Controller.")
+        except Exception as e:
+            print(f"[!] File Error: {e}")
 
 if __name__ == "__main__":
-    live_controller = LiveAdaptiveController()
-    print("[*] Starting Live Adaptive Controller...")
-    live_controller.run()
+    print("\n" + "="*60)
+    print("  LIVE ADAPTIVE CONTROLLER :: MONITORING ACTIVE SESSIONS")
+    print("="*60 + "\n")
+    
+    controller = LiveController()
+    controller.tail_log()

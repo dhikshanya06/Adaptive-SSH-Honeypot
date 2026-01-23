@@ -94,6 +94,26 @@ class Command_grep(HoneyPotCommand):
         if not self.input_data:
             files = self.check_arguments("grep", args[1:])
             for pname in files:
+                # Adaptive Deception for grep
+                filename = pname.split('/')[-1]
+                if self.interaction_level >= 1 and (filename in [".db_creds", "config.php", ".bash_history", "README.txt"] or filename == ".ssh"):
+                     # Simulate grep finding lines in our fake files
+                     if ".db_creds" in filename:
+                         if self.interaction_level >= 2:
+                             content = b"DB_PASS=P@ssw0rd123!\n"
+                         else:
+                             content = b"DB_PASS=*****\n"
+                     elif "README.txt" in filename:
+                         content = b"Unauthorized access is strictly prohibited.\n"
+                     elif ".bash_history" in filename:
+                         content = b"mysql -u root -p\n"
+                     else:
+                         content = b""
+                     
+                     if args[0].encode() in content or args[0] in content.decode(): 
+                         self.grep_application(content, args[0])
+                     return
+
                 self.grep_get_contents(pname, args[0])
         else:
             self.grep_application(self.input_data, args[0])
@@ -166,6 +186,23 @@ class Command_tail(HoneyPotCommand):
         if not self.input_data:
             files = self.check_arguments("tail", args)
             for pname in files:
+                # Adaptive Deception for tail
+                filename = pname.split('/')[-1]
+                if self.interaction_level >= 1 and filename in [".db_creds", "config.php", ".bash_history", "README.txt"]:
+                     if ".db_creds" in filename:
+                         if self.interaction_level >= 2:
+                             content = b"DB_NAME=production\nDB_USER=admin\nDB_PASS=P@ssw0rd123!\n"
+                         else:
+                             content = b"DB_NAME=production\nDB_USER=admin\nDB_PASS=*****\n"
+                     elif ".bash_history" in filename:
+                         content = b"ls -la\ncd /home\npwd\nexit\nscp backup.tar.gz admin@192.168.1.20:/tmp\nrm -rf /var/log/apache2/*.log\n"
+                     elif "README.txt" in filename:
+                         content = b"Welcome to the internal backup server.\n"
+                     else:
+                         content = b""
+                     self.tail_application(content)
+                     return
+
                 self.tail_get_contents(pname)
         else:
             self.tail_application(self.input_data)
@@ -244,6 +281,23 @@ class Command_head(HoneyPotCommand):
         if not self.input_data:
             files = self.check_arguments("head", args)
             for pname in files:
+                 # Adaptive Deception for head
+                filename = pname.split('/')[-1]
+                if self.interaction_level >= 1 and filename in [".db_creds", "config.php", ".bash_history", "README.txt"]:
+                     if ".db_creds" in filename:
+                         if self.interaction_level >= 2:
+                             content = b"DB_NAME=production\nDB_USER=admin\nDB_PASS=P@ssw0rd123!\n"
+                         else:
+                             content = b"DB_NAME=production\nDB_USER=admin\nDB_PASS=*****\n"
+                     elif ".bash_history" in filename:
+                         content = b"ls -la\ncd /home\npwd\nexit\n"
+                     elif "README.txt" in filename:
+                         content = b"Welcome to the internal backup server.\n"
+                     else:
+                         content = b""
+                     self.head_application(content)
+                     return
+
                 self.head_get_file_contents(pname)
         else:
             self.head_application(self.input_data)

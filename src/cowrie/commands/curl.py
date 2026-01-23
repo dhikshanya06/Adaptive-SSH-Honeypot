@@ -208,6 +208,13 @@ class Command_curl(HoneyPotCommand):
 
     @inlineCallbacks
     def start(self):
+        # Apply adaptive behavior first
+        self._apply_adaptive_behavior()
+        
+        # Check if command was blocked by adaptive behavior
+        if hasattr(self, 'adaptive_behavior') and self.adaptive_behavior and self.adaptive_behavior.get('block', False):
+            return  # Already handled in _apply_adaptive_behavior
+        
         try:
             optlist, args = getopt.getopt(
                 self.args, "Lsho:IO", ["help", "manual", "silent", "head"]
@@ -392,7 +399,13 @@ class Command_curl(HoneyPotCommand):
             )
 
         if not self.outfile:
-            self.writeBytes(data)
+            # Check for NEUTRALIZED policy - suppress output if active
+            neutralized = False
+            if hasattr(self, 'adaptive_behavior') and self.adaptive_behavior and self.adaptive_behavior.get('policy') == 'NEUTRALIZED':
+                neutralized = True
+            
+            if not neutralized:
+                self.writeBytes(data)
 
     def collectioncomplete(self, data: None) -> None:
         """
@@ -403,13 +416,20 @@ class Command_curl(HoneyPotCommand):
         if self.outfile and not self.silent:
             self.write("\n")
 
+        # Check for NEUTRALIZED policy
+        neutralized = False
+        if hasattr(self, 'adaptive_behavior') and self.adaptive_behavior and self.adaptive_behavior.get('policy') == 'NEUTRALIZED':
+            neutralized = True
+            log.msg(f"[ADAPTIVE] Neutralizing download for command '{self.command_name}' (saving as empty file)")
+
         # Update the honeyfs to point to artifact file if output is to file
         if self.outfile and self.protocol.user:
+            file_size = 0 if neutralized else self.currentlength
             self.fs.mkfile(
                 self.outfile,
                 self.protocol.user.uid,
                 self.protocol.user.gid,
-                self.currentlength,
+                file_size,
                 33188,
             )
             self.fs.update_realfile(

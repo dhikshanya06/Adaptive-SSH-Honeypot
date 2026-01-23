@@ -1,0 +1,123 @@
+2026-01-15T16:33:53.287316Z [-] Reading configuration from ['/home/dhikshanya06/Adaptive-SSH-Honeypot/etc/cowrie.cfg.dist', '/home/dhikshanya06/Adaptive-SSH-Honeypot/etc/cowrie.cfg']
+2026-01-15T16:33:54.110022Z [-] Python Version 3.10.12 (main, Jan  8 2026, 06:52:19) [GCC 11.4.0]
+2026-01-15T16:33:54.110085Z [-] Twisted Version 25.5.0
+2026-01-15T16:33:54.110111Z [-] Cowrie Version 0.1.dev1+g1bf453140.d20251231
+2026-01-15T16:33:54.110130Z [-] Sensor UUID: cd048414-e644-11f0-a234-19d688cd626d
+2026-01-15T16:33:54.114177Z [-] Loaded output engine: jsonlog
+2026-01-15T16:33:54.116727Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 25.5.0 (/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/bin/python3 3.10.12) starting up.
+2026-01-15T16:33:54.116929Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2026-01-15T16:33:54.122600Z [-] CowrieSSHFactory starting on 2222
+2026-01-15T16:33:54.123293Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7552bbee24a0>
+2026-01-15T16:33:54.278884Z [-] Ready to accept SSH connections
+2026-01-15T16:34:13.959092Z [cowrie.ssh.factory.CowrieSSHFactory] No moduli, no diffie-hellman-group-exchange-sha1
+2026-01-15T16:34:13.959425Z [cowrie.ssh.factory.CowrieSSHFactory] No moduli, no diffie-hellman-group-exchange-sha256
+2026-01-15T16:34:13.960724Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 127.0.0.1:40498 (127.0.0.1:2222) [session: 7c4475c7304b]
+2026-01-15T16:34:13.962445Z [HoneyPotSSHTransport,0,127.0.0.1] Remote SSH version: SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.13
+2026-01-15T16:34:14.000306Z [HoneyPotSSHTransport,0,127.0.0.1] SSH client hassh fingerprint: e1d88fdd485f9c710074daa1fcce80a6
+2026-01-15T16:34:14.002537Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2026-01-15T16:34:14.002717Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2026-01-15T16:34:14.002855Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2026-01-15T16:34:14.052303Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2026-01-15T16:34:14.090364Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2026-01-15T16:34:14.090872Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' trying auth b'none'
+2026-01-15T16:34:14.950336Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' trying auth b'password'
+2026-01-15T16:34:14.970376Z [HoneyPotSSHTransport,0,127.0.0.1] login attempt [b'root'/b'l'] succeeded
+2026-01-15T16:34:14.971467Z [HoneyPotSSHTransport,0,127.0.0.1] DEBUG: Randomized hostname to svr04 (Configured was svr04)
+2026-01-15T16:34:14.971653Z [HoneyPotSSHTransport,0,127.0.0.1] Initialized emulated server as architecture: linux-x64-lsb
+2026-01-15T16:34:14.972102Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' authenticated with b'password'
+2026-01-15T16:34:14.972442Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2026-01-15T16:34:14.973373Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2026-01-15T16:34:14.973755Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2026-01-15T16:34:14.973963Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2026-01-15T16:34:15.023249Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,127.0.0.1] Synced filesystem hostname to: svr04
+2026-01-15T16:34:15.033703Z [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (49, 211, 0, 0)
+2026-01-15T16:34:15.033842Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,127.0.0.1] Terminal Size: 211 49
+2026-01-15T16:34:15.034451Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,127.0.0.1] request_env: LANG=en_IN
+2026-01-15T16:34:15.034931Z [twisted.conch.ssh.session#info] Getting shell
+2026-01-15T16:34:16.310015Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: la
+2026-01-15T16:34:16.311469Z [HoneyPotSSHTransport,0,127.0.0.1] Command not found: la 
+2026-01-15T16:34:17.792517Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: ls
+2026-01-15T16:34:17.793517Z [HoneyPotSSHTransport,0,127.0.0.1] Command found: ls 
+2026-01-15T16:34:17.888655Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Policy file not found at /home/dhikshanya06/Adaptive-SSH-Honeypot/src/var/lib/cowrie/session_policies.json, using default level 1
+2026-01-15T16:34:17.951785Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Processing command 'ls' for session 7c4475c7304b
+2026-01-15T16:34:17.952191Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Command 'ls' categorized as 'reconnaissance', count=1, policy=NORMAL
+2026-01-15T16:34:18.012985Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE]
+	session=7c4475c7304b
+	command=ls
+	category=reconnaissance
+	count=1
+	policy=NORMAL
+2026-01-15T16:34:19.112601Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: ls
+2026-01-15T16:34:19.113642Z [HoneyPotSSHTransport,0,127.0.0.1] Command found: ls 
+2026-01-15T16:34:19.114085Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Policy file not found at /home/dhikshanya06/Adaptive-SSH-Honeypot/src/var/lib/cowrie/session_policies.json, using default level 1
+2026-01-15T16:34:19.114367Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Processing command 'ls' for session 7c4475c7304b
+2026-01-15T16:34:19.114514Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Command 'ls' categorized as 'reconnaissance', count=2, policy=NORMAL
+2026-01-15T16:34:19.114700Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE]
+	session=7c4475c7304b
+	command=ls
+	category=reconnaissance
+	count=2
+	policy=NORMAL
+2026-01-15T16:34:19.967516Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: ls
+2026-01-15T16:34:19.968026Z [HoneyPotSSHTransport,0,127.0.0.1] Command found: ls 
+2026-01-15T16:34:19.968345Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Policy file not found at /home/dhikshanya06/Adaptive-SSH-Honeypot/src/var/lib/cowrie/session_policies.json, using default level 1
+2026-01-15T16:34:19.968544Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Processing command 'ls' for session 7c4475c7304b
+2026-01-15T16:34:19.968640Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Command 'ls' categorized as 'reconnaissance', count=3, policy=NORMAL
+2026-01-15T16:34:19.968762Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE]
+	session=7c4475c7304b
+	command=ls
+	category=reconnaissance
+	count=3
+	policy=NORMAL
+2026-01-15T16:34:20.925352Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: ls
+2026-01-15T16:34:20.926469Z [HoneyPotSSHTransport,0,127.0.0.1] Command found: ls 
+2026-01-15T16:34:20.926936Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Policy file not found at /home/dhikshanya06/Adaptive-SSH-Honeypot/src/var/lib/cowrie/session_policies.json, using default level 1
+2026-01-15T16:34:20.927227Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Processing command 'ls' for session 7c4475c7304b
+2026-01-15T16:34:20.927399Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Command 'ls' categorized as 'reconnaissance', count=4, policy=DELAYED
+2026-01-15T16:34:20.927605Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE]
+	session=7c4475c7304b
+	command=ls
+	category=reconnaissance
+	count=4
+	policy=DELAYED
+	delay=1.97s
+2026-01-15T16:34:20.927729Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Applying delay of 1.97 seconds for command 'ls'
+2026-01-15T16:34:27.032952Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: sudo ls
+2026-01-15T16:34:27.034034Z [HoneyPotSSHTransport,0,127.0.0.1] Command found: sudo ls
+2026-01-15T16:34:27.034538Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Policy file not found at /home/dhikshanya06/Adaptive-SSH-Honeypot/src/var/lib/cowrie/session_policies.json, using default level 1
+2026-01-15T16:34:27.034862Z [HoneyPotSSHTransport,0,127.0.0.1] Privilege escalation attempt via sudo (count=1)
+2026-01-15T16:34:30.978950Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: sudo ls
+2026-01-15T16:34:30.980144Z [HoneyPotSSHTransport,0,127.0.0.1] Command found: sudo ls
+2026-01-15T16:34:30.980645Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Policy file not found at /home/dhikshanya06/Adaptive-SSH-Honeypot/src/var/lib/cowrie/session_policies.json, using default level 1
+2026-01-15T16:34:30.980994Z [HoneyPotSSHTransport,0,127.0.0.1] Privilege escalation attempt via sudo (count=2)
+2026-01-15T16:34:33.234742Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: sudo ls
+2026-01-15T16:34:33.235819Z [HoneyPotSSHTransport,0,127.0.0.1] Command found: sudo ls
+2026-01-15T16:34:33.236275Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Policy file not found at /home/dhikshanya06/Adaptive-SSH-Honeypot/src/var/lib/cowrie/session_policies.json, using default level 1
+2026-01-15T16:34:33.236580Z [HoneyPotSSHTransport,0,127.0.0.1] Privilege escalation attempt via sudo (count=3)
+2026-01-15T16:34:43.953460Z [HoneyPotSSHTransport,0,127.0.0.1] CMD: exit
+2026-01-15T16:34:43.954579Z [HoneyPotSSHTransport,0,127.0.0.1] Command found: exit 
+2026-01-15T16:34:43.955063Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Policy file not found at /home/dhikshanya06/Adaptive-SSH-Honeypot/src/var/lib/cowrie/session_policies.json, using default level 1
+2026-01-15T16:34:43.955364Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Processing command 'exit' for session 7c4475c7304b
+2026-01-15T16:34:43.955535Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Command 'exit' categorized as 'unknown_suspicious', count=1, policy=HIGH_RISK
+2026-01-15T16:34:43.955749Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE]
+	session=7c4475c7304b
+	command=exit
+	category=unknown_suspicious
+	count=1
+	policy=HIGH_RISK
+	delay=5.00s
+2026-01-15T16:34:43.955869Z [HoneyPotSSHTransport,0,127.0.0.1] [ADAPTIVE] Applying delay of 5.00 seconds for command 'exit'
+2026-01-15T16:34:48.961264Z [twisted.conch.ssh.session#info] exitCode: 0
+2026-01-15T16:34:48.961708Z [cowrie.ssh.connection.CowrieSSHConnection#debug] sending request b'exit-status'
+2026-01-15T16:34:48.962536Z [HoneyPotSSHTransport,0,127.0.0.1] Closing TTY Log: var/lib/cowrie/tty/baf873c1c66ac31f8227be29f9c3257c127f78eef1f9bdf39eb40b6ebcdc4245 after 33.9 seconds
+2026-01-15T16:34:48.963582Z [cowrie.ssh.connection.CowrieSSHConnection#info] sending close 0
+2026-01-15T16:34:48.964405Z [cowrie.ssh.session.HoneyPotSSHSession#info] remote close
+2026-01-15T16:34:48.964733Z [HoneyPotSSHTransport,0,127.0.0.1] Got remote error, code 11 reason: b'disconnected by user'
+2026-01-15T16:34:48.965232Z [HoneyPotSSHTransport,0,127.0.0.1] avatar root logging out
+2026-01-15T16:34:48.965507Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2026-01-15T16:34:48.965682Z [HoneyPotSSHTransport,0,127.0.0.1] Connection lost after 35.0 seconds
+2026-01-15T16:35:41.168885Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2026-01-15T16:35:41.169334Z [-] (TCP Port 2222 Closed)
+2026-01-15T16:35:41.169514Z [cowrie.ssh.factory.CowrieSSHFactory#info] Stopping factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7552bbee24a0>
+2026-01-15T16:35:41.169702Z [twisted.internet.base#info] Main loop terminated.
+2026-01-15T16:35:41.169924Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.

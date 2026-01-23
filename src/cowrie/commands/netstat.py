@@ -105,25 +105,48 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State\n"""
                 c_name = socket.gethostbyaddr(self.protocol.clientIP)[0][:17]
             except Exception:
                 c_name = self.protocol.clientIP
-        if self.show_listen or self.show_all:
-            self.write(
-                "tcp        0      0 *:ssh                   *:*                     LISTEN\n"
-            )
-        if not self.show_listen or self.show_all:
-            line = "tcp        0    308 {}:{}{}{}:{}{}{}".format(
-                s_name,
-                s_port,
-                " " * (24 - len(s_name + s_port) - 1),
-                c_name,
-                c_port,
-                " " * (24 - len(c_name + c_port) - 1),
-                "ESTABLISHED",
-            )
-            self.write(f"{line}\n")
-        if self.show_listen or self.show_all:
-            self.write(
-                "tcp6       0      0 [::]:ssh                [::]:*                  LISTEN\n"
-            )
+        # Adaptive Netstat Output
+        if self.interaction_level == 1:
+            # L1: Minimal - Only Loopback/SSH
+            if self.show_listen or self.show_all:
+                self.write(
+                    "tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN\n"
+                )
+            if not self.show_listen or self.show_all:
+                line = "tcp        0      0 127.0.0.1:22            127.0.0.1:45678         ESTABLISHED"
+                self.write(f"{line}\n")
+                
+        elif self.interaction_level == 2:
+            # L2: Internal Network Visible
+            if self.show_listen or self.show_all:
+                self.write(
+                    "tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN\n"
+                )
+                self.write(
+                    "tcp        0      0 192.168.1.100:80        0.0.0.0:*               LISTEN\n"
+                )
+            if not self.show_listen or self.show_all:
+                 self.write("tcp        0    308 192.168.1.100:22        192.168.1.50:54321      ESTABLISHED\n")
+
+        elif self.interaction_level >= 3:
+            # L3: Busy Production Server (Docker, DBs)
+            if self.show_listen or self.show_all:
+                self.write(
+                    "tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN\n"
+                )
+                self.write(
+                    "tcp        0      0 192.168.1.100:80        0.0.0.0:*               LISTEN\n"
+                )
+                self.write(
+                    "tcp        0      0 0.0.0.0:3306            0.0.0.0:*               LISTEN\n"
+                )
+                self.write(
+                    "tcp6       0      0 :::8080                 :::*                    LISTEN\n"
+                )
+            if not self.show_listen or self.show_all:
+                self.write("tcp        0      0 192.168.1.100:22        192.168.1.50:54321      ESTABLISHED\n")
+                self.write("tcp        0      0 192.168.1.100:3306      172.17.0.2:48290        ESTABLISHED\n")
+                self.write("tcp        0      0 172.17.0.1:443          104.21.55.2:443         TIME_WAIT\n")
         self.write(
             """Active UNIX domain sockets (only servers)
 Proto RefCnt Flags       Type       State         I-Node   Path\n"""

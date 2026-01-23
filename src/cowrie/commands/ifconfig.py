@@ -81,20 +81,28 @@ class Command_ifconfig(HoneyPotCommand):
             lo_mb,
         )
 
+        if self.interaction_level >= 2:
+            # L2/L3: Internal Network - Ensure IP looks like internal if not already
+            # Replacing protocol IP logic with hardcoded internal IP for consistency with netstat
+            fake_ip = "192.168.1.100"
+            bcast = "192.168.1.255"
+        else:
+            fake_ip = self.protocol.kippoIP
+            bcast = self.protocol.kippoIP.rsplit(".", 1)[0] + ".255"
+
         # Realism: Always show both eth0 and lo
         eth0_result = """eth0      Link encap:Ethernet  HWaddr {}
-          inet addr:{}  Bcast:{}.255  Mask:255.255.255.0
+          inet addr:{}  Bcast:{}  Mask:255.255.255.0
           inet6 addr: {} Scope:Link
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
           RX packets:{} errors:0 dropped:0 overruns:0 frame:0
           TX packets:{} errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:1000
           RX bytes:{} ({} MB)  TX bytes:{} ({} MB)
-
 """.format(
             HWaddr,
-            self.protocol.kippoIP,
-            self.protocol.kippoIP.rsplit(".", 1)[0],
+            fake_ip,
+            bcast,
             inet6,
             rx_packets,
             tx_packets,
@@ -104,7 +112,20 @@ class Command_ifconfig(HoneyPotCommand):
             tx_mb_eth0,
         )
         
-        self.write(f"{eth0_result}{lo_result}\n")
+        extra_interfaces = ""
+        if self.interaction_level >= 3:
+            # L3: Docker Interface
+            extra_interfaces = """
+docker0   Link encap:Ethernet  HWaddr 02:42:1a:8c:12:34
+          inet addr:172.17.0.1  Bcast:172.17.255.255  Mask:255.255.0.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1234 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2345 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:100000 (0.1 MB)  TX bytes:2000000 (2.0 MB)
+"""
+
+        self.write(f"{eth0_result}{lo_result}{extra_interfaces}\n")
 
 
 commands["/sbin/ifconfig"] = Command_ifconfig

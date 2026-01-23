@@ -1,4 +1,4 @@
-#!/home/dhikshanya06/cowrie/cowrie-env/bin/python3
+#!/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/bin/python3
 import sys
 from automat._visualize import tool
 if __name__ == '__main__':

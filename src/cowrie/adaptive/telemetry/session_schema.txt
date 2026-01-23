@@ -1,0 +1,9 @@
+session_id
+timestamp_start
+timestamp_end
+commands_executed
+files_accessed
+hidden_files_accessed
+network_urls
+binary_downloads
+command_frequency
