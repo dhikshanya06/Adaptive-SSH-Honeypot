@@ -1,0 +1,3 @@
+honeyfs/home/admin/.gcp_service_account.json
+honeyfs/home/admin/.env.production
+*.env
