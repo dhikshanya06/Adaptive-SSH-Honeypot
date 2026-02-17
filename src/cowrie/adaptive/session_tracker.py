@@ -25,3 +25,13 @@ class SessionTracker:
                 command: 1
             }
         }
+
+sessions = {}
+
+def increase_suspicion(session_id):
+    if session_id not in sessions:
+        sessions[session_id] = 0
+    sessions[session_id] += 5
+
+def get_suspicion(session_id):
+    return sessions.get(session_id, 0)

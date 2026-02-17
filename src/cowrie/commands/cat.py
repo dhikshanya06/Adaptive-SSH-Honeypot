@@ -4,11 +4,107 @@ import time
 from cowrie.shell.command import HoneyPotCommand
 from cowrie.shell.fs import FileNotFound
 from cowrie.adaptive.policy.policy_engine import PolicyEngine
+from cowrie.adaptive.rl_agent import rl_agent
 
 commands = {}
 
 
 class Command_cat(HoneyPotCommand):
+
+    def start(self) -> None:
+        session_id = self.protocol.sessionno
+        action = rl_agent.current_action.get(session_id, 0)
+
+    def start(self) -> None:
+        # --- RL INTEGRATION ---
+        from cowrie.adaptive.rl_agent import rl_agent
+        from twisted.python import log
+        session_id = self.protocol.sessionno
+        action = rl_agent.current_action.get(session_id, 0)
+
+        log.msg(f"[CAT DEBUG] args: {self.args}, action: {action}")
+
+
+        # 2: inject_fake_file
+        if action == 2:
+            self.write("AWS_ACCESS_KEY=AKIA1X2X3X4X\n")
+            self.write("AWS_SECRET_KEY=abcd1234xyz\n")
+            self.write("DB_PASSWORD=ProdServer@123\n")
+            self.exit()
+            return
+
+        # 3: fake_error
+        elif action == 3:
+            filename = self.args[0] if self.args else "file"
+            self.errorWrite(f"cat: {filename}: No such file or directory\n")
+            self.exit()
+            return
+
+        # 4: escalate_deception
+        elif action == 4:
+             self.write("root_password=UltraSecure@2026\n")
+             self.write("admin_token=ZXCVBNM998877\n")
+             self.write("backup_location=/mnt/backups/prod\n")
+             self.exit()
+             return
+
+        # 5: terminate_session
+        elif action == 5:
+            self.protocol.transport.loseConnection()
+            return
+            
+        # 1: add_delay
+        elif action == 1:
+            from twisted.internet import reactor
+            # "Binary data output..." after 2 sec delay
+            # User request:
+            # (2 second delay)
+            # Binary data output...
+            
+            # Since we can't easily blocking sleep here without blocking the reactor
+            # But the user *expects* a delay. 
+            # We will use callLater to write the output and exit.
+            
+            reactor.callLater(2.0, self._write_normal_output_and_exit)
+            return
+
+        # 0: normal_response
+        # User request:
+        # Binary data output...
+        self._write_normal_output_and_exit()
+
+    def _write_normal_output_and_exit(self):
+        # Spec from user:
+        # Command: cat secrets.db
+        # Action 0: Binary data output...
+        
+        # Check all args for the target filename just in case
+        args_str = " ".join(self.args) if self.args else ""
+        
+        # DEBUG
+        from twisted.python import log
+        match = "secrets.db" in args_str
+        log.msg(f"[CAT DEBUG] matches secrets.db? {match} (args_str: '{args_str}')")
+        
+        # If the user is targeting the specific demo file
+        if match:
+             self.write("Binary data output...\n")
+             from twisted.internet import reactor
+             reactor.callLater(0.1, self.exit)
+             return
+
+        # otherwise, fall back to standard behavior (reading from honeyfs)
+        # We invoke self.call() directly to avoid re-triggering RL logic in super().start()
+        # self.call() expects self.args to be set, which they are.
+        try:
+            self.call()
+            # self.call() usually doesn't exit, we must exit after it returns?
+            # 'call' loops through args.
+            # After call returns, we should exit.
+            self.exit()
+        except Exception:
+            self.exit()
+
 
     def call(self) -> None:
         if not self.args:

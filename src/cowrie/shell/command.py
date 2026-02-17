@@ -16,8 +16,15 @@ if TYPE_CHECKING:
 from twisted.internet import error
 from twisted.python import failure, log
 from cowrie.core.config import CowrieConfig
+from cowrie.adaptive.rl_agent import rl_agent
 
 # Import adaptive components (with error handling for optional dependency)
+try:
+    from cowrie.adaptive.session_tracker import increase_suspicion, get_suspicion
+except ImportError:
+    def increase_suspicion(session_id): pass
+    def get_suspicion(session_id): return 0
+
 try:
     from cowrie.adaptive.adaptive_logger import get_adaptive_logger
     from cowrie.adaptive.adaptive_command_logger import get_adaptive_command_logger
@@ -77,6 +84,36 @@ class HoneyPotCommand:
                     interaction_level=self.interaction_level,
                     reason=f"Command executed with interaction level {self.interaction_level}"
                 )
+
+
+        # --- RL INTEGRATION START ---
+        try:
+            # Simple demo state as requested
+            # Use extract_state if available or fallback to dummy
+            try:
+                state = rl_agent.extract_state(self)
+            except:
+                state = (0, 0, 0, 0)
+
+            action = rl_agent.select_action(state)
+
+            session_id = self.protocol.sessionno
+            
+            # Store action for this session
+            rl_agent.current_action[session_id] = action
+
+            print(f"[RL] Selected Action {action} for session {session_id}")
+            # Emit structured event for JSON log
+            log.msg(eventid='cowrie.rl.action', action=action, session=session_id, message=f"RL Action Selected: {action}")
+            
+            # Store action in protocol (for historical reasons/other components)
+            self.protocol._rl_action = action
+            self.protocol._rl_state = state
+
+        except Exception as e:
+            print(f"[RL ERROR] {e}")
+            log.msg(f"[RL ERROR] {e}")
+        # --- RL INTEGRATION END ---
 
     def get_interaction_level(self) -> int:
         """
@@ -185,8 +222,11 @@ class HoneyPotCommand:
         """
         # Initialize blocked flag
         self._blocked_by_adaptive = False
-        
+
+
+
         # Calculate delay and determine output modifiers
+        delay = self._apply_adaptive_behavior()
         delay = self._apply_adaptive_behavior()
         
         # Check if command was blocked immediately
@@ -206,6 +246,52 @@ class HoneyPotCommand:
         """
         Actual execution logic, called possibly after a delay.
         """
+        # Check for honeytoken
+        honeytokens = [
+            ".aws_backup_keys.txt",
+            "passwords.txt",
+            "backup_credentials.txt"
+        ]
+        
+        honeytoken_triggered = None
+        for arg in self.args:
+            for token in honeytokens:
+                if token in arg:
+                    honeytoken_triggered = token
+                    break
+            if honeytoken_triggered:
+                break
+        
+        if honeytoken_triggered:
+            session_id = getattr(self.protocol, 'session_id', None) or getattr(self.protocol, 'sessionno', 'unknown')
+            print(f"[ADAPTIVE] Honeytoken '{honeytoken_triggered}' triggered by session: {session_id}")
+            log.msg(eventid="cowrie.honeytoken.triggered",
+                   token=honeytoken_triggered,
+                   session=session_id)
+            increase_suspicion(session_id)
+
+        # Apply adaptive delay based on suspicion score AND persistent interaction level
+        session_id = getattr(self.protocol, 'session_id', None) or getattr(self.protocol, 'sessionno', 'unknown')
+        score = get_suspicion(session_id)
+        
+        # Determine delay based on Interaction Level (Persistent)
+        # Level 1: Low (0s)
+        # Level 2: Medium (0s)
+        # Level 3: High (2s)
+        # Level 4: Critical (5s + Potential Fake Errors)
+        
+        delay = 0
+        if self.interaction_level >= 4:
+            delay = 5
+        elif self.interaction_level >= 3:
+            delay = 2
+        elif score >= 5:
+            delay = 2
+            
+        if delay > 0:
+            import time
+            time.sleep(delay)
+
         # Execute the command
         self.call()
         self.exit()
@@ -297,6 +383,16 @@ class HoneyPotCommand:
         """
         Sometimes client is disconnected and command exits after. So cmdstack is gone
         """
+        # --- RL INTEGRATION UPDATE ---
+        try:
+            if hasattr(self.protocol, '_rl_state') and self.protocol._rl_state is not None:
+                reward = rl_agent.compute_reward(self)
+                # Next state is approximated as current state for simple Q-learning here
+                rl_agent.update(self.protocol._rl_state, self.protocol._rl_action, reward, self.protocol._rl_state)
+        except Exception as e:
+            log.msg(f"[RL ERROR] Failed during agent update: {e}")
+        # --- RL INTEGRATION END ---
+
         if (
             self.protocol
             and self.protocol.terminal

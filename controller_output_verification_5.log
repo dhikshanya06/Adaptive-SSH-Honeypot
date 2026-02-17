@@ -1,0 +1,40 @@
+nohup: ignoring input
+
+============================================================
+  LIVE ADAPTIVE CONTROLLER :: MONITORING ACTIVE SESSIONS
+============================================================
+
+[RL] Model loaded from q_table.pkl
+[*] Monitoring Log Base: /home/dhikshanya06/Adaptive-SSH-Honeypot/var/log/cowrie
+[+] Success: Found log file at /home/dhikshanya06/Adaptive-SSH-Honeypot/var/log/cowrie/cowrie.json
+[+] Tail started. Waiting for new events...
+[!!!] CRITICAL ALERT: 9201a421c1c1 accessed .aws_backup_keys.txt (cloud)
+[DEFENSE] 9201a421c1c1: Injecting fake AWS permission error logs
+   [ACTIVITY] 9201a421c1c1: Command 'ls; ls; ls; cat .aws_backup_keys.txt'
+   [RL AGENT] State Detected -> Action: normal_response (0)
+   [!!!] CRTICAL ALERT: Session 9201a421c1c1 triggered honeytoken .aws_backup_keys.txt
+[...] Waiting for events... (22:15:35)
+[...] Waiting for events... (22:16:05)
+[...] Waiting for events... (22:16:35)
+   [ACTIVITY] 6332cd8e653b: Command 'ls'
+   [RL AGENT] State Detected -> Action: normal_response (0)
+   [ACTIVITY] 6332cd8e653b: Command 'whoami'
+   [RL REWARD] Calculated Reward: 1 (HT=0, Len=2)
+   [RL UPDATE] S:(0, 0, 0, 0) A:0 R:1 -> Q-Old:60.76 Q-New:60.25
+   [RL AGENT] State Detected -> Action: normal_response (0)
+   [ACTIVITY] 6332cd8e653b: Command 'exit'
+   [RL REWARD] Calculated Reward: 1 (HT=0, Len=3)
+   [RL UPDATE] S:(0, 0, 0, 0) A:0 R:1 -> Q-Old:60.25 Q-New:59.75
+   [RL AGENT] State Detected -> Action: normal_response (0)
+[...] Waiting for events... (22:18:10)
+[...] Waiting for events... (22:18:40)
+[...] Waiting for events... (22:19:10)
+[...] Waiting for events... (22:19:40)
+[...] Waiting for events... (22:20:10)
+[...] Waiting for events... (22:20:40)
+[...] Waiting for events... (22:21:10)
+[...] Waiting for events... (22:21:40)
+[...] Waiting for events... (22:22:10)
+[...] Waiting for events... (22:22:40)
+[...] Waiting for events... (22:23:10)
+[...] Waiting for events... (22:23:40)

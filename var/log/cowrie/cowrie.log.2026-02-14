@@ -1,0 +1,44 @@
+2026-02-14T22:09:11.372920Z [-] Reading configuration from ['/home/dhikshanya06/Adaptive-SSH-Honeypot/etc/cowrie.cfg.dist', '/home/dhikshanya06/Adaptive-SSH-Honeypot/etc/cowrie.cfg']
+2026-02-14T22:09:12.351091Z [-] [ADAPTIVE] Adaptive components not available: No module named 'cowrie.adaptive.adaptive_logger'
+2026-02-14T22:09:20.396193Z [-] Python Version 3.10.12 (main, Jan 26 2026, 14:55:28) [GCC 11.4.0]
+2026-02-14T22:09:20.396233Z [-] Twisted Version 25.5.0
+2026-02-14T22:09:20.396249Z [-] Cowrie Version 0.1.dev1+g1bf453140.d20251231
+2026-02-14T22:09:20.396266Z [-] Sensor UUID: cd048414-e644-11f0-a234-19d688cd626d
+2026-02-14T22:09:20.397804Z [-] Loaded output engine: jsonlog
+2026-02-14T22:09:20.399057Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 25.5.0 (/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/bin/python3 3.10.12) starting up.
+2026-02-14T22:09:20.399364Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2026-02-14T22:09:20.403473Z [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/lib/python3.10/site-packages/twisted/internet/defer.py", line 155, in execute
+	    result = callable(*args, **kwargs)
+	  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 366, in listenTCP
+	    p.startListening()
+	  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/lib/python3.10/site-packages/twisted/internet/tcp.py", line 1360, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:2222: [Errno 98] Address already in use.
+	
+2026-02-14T22:31:25.507829Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2026-02-14T22:31:25.509012Z [twisted.internet.base#info] Main loop terminated.
+2026-02-14T22:31:25.509480Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2026-02-14T22:31:40.032472Z [-] Reading configuration from ['/home/dhikshanya06/Adaptive-SSH-Honeypot/etc/cowrie.cfg.dist', '/home/dhikshanya06/Adaptive-SSH-Honeypot/etc/cowrie.cfg']
+2026-02-14T22:31:41.067325Z [-] [ADAPTIVE] Adaptive components not available: No module named 'cowrie.adaptive.adaptive_logger'
+2026-02-14T22:31:48.479947Z [-] Python Version 3.10.12 (main, Jan 26 2026, 14:55:28) [GCC 11.4.0]
+2026-02-14T22:31:48.480001Z [-] Twisted Version 25.5.0
+2026-02-14T22:31:48.480024Z [-] Cowrie Version 0.1.dev1+g1bf453140.d20251231
+2026-02-14T22:31:48.480040Z [-] Sensor UUID: cd048414-e644-11f0-a234-19d688cd626d
+2026-02-14T22:31:48.481735Z [-] Loaded output engine: jsonlog
+2026-02-14T22:31:48.483801Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 25.5.0 (/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/bin/python3 3.10.12) starting up.
+2026-02-14T22:31:48.484281Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2026-02-14T22:31:48.488362Z [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/lib/python3.10/site-packages/twisted/internet/defer.py", line 155, in execute
+	    result = callable(*args, **kwargs)
+	  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 366, in listenTCP
+	    p.startListening()
+	  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/cowrie-env/lib/python3.10/site-packages/twisted/internet/tcp.py", line 1360, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:2222: [Errno 98] Address already in use.
+	
+2026-02-14T22:50:02.003015Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2026-02-14T22:50:02.279065Z [twisted.internet.base#info] Main loop terminated.
+2026-02-14T22:50:02.279576Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.

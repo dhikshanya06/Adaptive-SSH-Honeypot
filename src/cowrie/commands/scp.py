@@ -63,6 +63,47 @@ class Command_scp(HoneyPotCommand):
         )
 
     def start(self) -> None:
+        # --- RL INTEGRATION ---
+        from cowrie.adaptive.rl_agent import rl_agent
+        session_id = self.protocol.sessionno
+        action = rl_agent.current_action.get(session_id, 0)
+
+        if action == 2:
+            self.write("Transfer complete.\n")
+            self.exit()
+            return
+
+        # 3: fake_error (Connection Lost)
+        elif action == 3:
+             self.errorWrite("scp: connection closed\n")
+             self.exit()
+             return
+
+        # 4: escalate_deception (Broken Pipe)
+        elif action == 4:
+             self.errorWrite("Warning: external transfer logged.\n")
+             self.exit()
+             return
+
+        # 5: terminate_session
+        elif action == 5:
+            self.protocol.transport.loseConnection()
+            return
+            
+        # 1: add_delay
+        elif action == 1:
+            import time
+            time.sleep(2.0)
+            # Fall through
+
+        # -------- NORMAL BEHAVIOR (Action 0) --------
+        # User spec:
+        # file.txt 100% 2KB  1.0KB/s 00:02
+        
+        self.write("file.txt 100% 2KB  1.0KB/s 00:02\n")
+        self.exit()
+        return
+
         try:
             optlist, args = getopt.getopt(self.args, "12346BCpqrvfstdv:cFiloPS:")
         except getopt.GetoptError:

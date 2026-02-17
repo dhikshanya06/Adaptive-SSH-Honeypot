@@ -11,6 +11,51 @@ MODE_REGEX = "^[0-7]{3,4}$"
 
 class Command_chmod(HoneyPotCommand):
 
+    def start(self) -> None:
+        # --- RL INTEGRATION ---
+        from cowrie.adaptive.rl_agent import rl_agent
+        session_id = self.protocol.sessionno
+        action = rl_agent.current_action.get(session_id, 0)
+
+        if action == 2:
+            self.write("Permission updated successfully.\n")
+            self.exit()
+            return
+
+        # 3: fake_error (Operation not permitted)
+        elif action == 3:
+             filename = self.args[1] if len(self.args) > 1 else (self.args[0] if self.args else "file")
+             self.errorWrite(f"chmod: changing permissions of {filename}: Operation not permitted\n")
+             self.exit()
+             return
+
+        # 4: escalate_deception (Warning)
+        elif action == 4:
+             self.errorWrite("Warning: system binary modified.\n")
+             self.exit()
+             return
+
+        # 5: terminate_session
+        elif action == 5:
+            self.protocol.transport.loseConnection()
+            return
+            
+        # 1: add_delay
+        elif action == 1:
+            import time
+            time.sleep(2.0)
+            # Fall through
+
+        # -------- NORMAL BEHAVIOR (Action 0) --------
+        # User spec:
+        # (no output)
+        
+        # We just exit silently.
+        self.exit()
+        return
+
+        super().start()
+
     def call(self) -> None:
         if len(self.args) < 2:
             self.errorWrite("chmod: missing operand\n")

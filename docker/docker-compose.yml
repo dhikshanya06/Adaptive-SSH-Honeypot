@@ -6,12 +6,14 @@ volumes:
 services:
   cowrie:
     restart: always
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
+    image: docker-cowrie
+    # build:
+    #   context: ..
+    #   dockerfile: docker/Dockerfile
     ports:
       - "2222:2222"
       - "2223:2223"
     volumes:
       - cowrie-etc:/cowrie/cowrie-git/etc
       - cowrie-var:/cowrie/cowrie-git/var
+      - ../src:/cowrie/src

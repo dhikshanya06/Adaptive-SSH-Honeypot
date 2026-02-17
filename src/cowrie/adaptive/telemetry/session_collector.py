@@ -1,8 +1,7 @@
-
 import time
 import json
 
-class SessionCollector:
+class SessionCollector: 
     def __init__(self, session_id):
         self.session_id = session_id
         self.start_time = time.time()
@@ -33,6 +32,12 @@ class SessionCollector:
         """Register a file download."""
         self.downloads.add(filename)
 
+    def add_alert(self, message):
+        """Register a high priority alert."""
+        if not hasattr(self, 'alerts'):
+            self.alerts = []
+        self.alerts.append(message)
+
     def get_summary(self):
         """Return the dictionary matching the session schema."""
         duration = time.time() - self.start_time
@@ -45,14 +50,19 @@ class SessionCollector:
             "hidden_files_accessed": list(self.hidden_files_accessed),
             "network_urls": list(self.urls),
             "binary_downloads": list(self.downloads),
+            "alerts": getattr(self, 'alerts', []),
             "command_frequency": len(self.commands) / (duration if duration > 0 else 1)
         }
         return summary
     
-    def get_text_summary(self):
+    def get_text_summary(self): # Input for Intelligent Agent
         """Returns a string summary suitable for LLM matching (commands + filenames)."""
         summary_parts = []
         
+        # 0. Alerts (Highest Priority)
+        if hasattr(self, 'alerts') and self.alerts:
+            summary_parts.append(f"ALERTS: {'; '.join(self.alerts)}.")
+
         # 1. Raw Command List (Always important)
         summary_parts.append(f"Commands executed: {', '.join(self.commands)}.")
         cmd_str = " ".join(self.commands).lower()

@@ -1,1 +1,68 @@
-{"test_session_456": {"level": 3}, "092e38c3c85e": {"level": 1}, "513052891fd0": {"level": 3}, "0ff9e600f946": {"level": 3}, "91a05919df48": {"level": 1}, "14a61b6bc718": {"level": 1}, "edd587e7011c": {"level": 3}, "a9646ed3d97e": {"level": 3}, "be4c65b86df8": {"level": 3}, "16c2f697f636": {"level": 3}, "6c80537d5b4a": {"level": 3}, "b2ec276d41c9": {"level": 2}}
+{
+  "test_session_456": {
+    "level": 3
+  },
+  "092e38c3c85e": {
+    "level": 1
+  },
+  "513052891fd0": {
+    "level": 3
+  },
+  "0ff9e600f946": {
+    "level": 3
+  },
+  "91a05919df48": {
+    "level": 1
+  },
+  "14a61b6bc718": {
+    "level": 1
+  },
+  "edd587e7011c": {
+    "level": 3
+  },
+  "a9646ed3d97e": {
+    "level": 3
+  },
+  "be4c65b86df8": {
+    "level": 3
+  },
+  "16c2f697f636": {
+    "level": 3
+  },
+  "6c80537d5b4a": {
+    "level": 3
+  },
+  "b2ec276d41c9": {
+    "level": 2
+  },
+  "session-demo-001": {
+    "intent": "adaptive_response",
+    "risk": "high",
+    "policy": "aggressive_deception",
+    "level": 3
+  },
+  "8d461c7d0a42": {
+    "intent": "adaptive_response",
+    "risk": "low",
+    "policy": "passive_monitoring",
+    "level": 1
+  },
+  "9201a421c1c1": {
+    "intent": "adaptive_response",
+    "risk": "low",
+    "policy": "passive_monitoring",
+    "level": 1
+  },
+  "6332cd8e653b": {
+    "intent": "adaptive_response",
+    "risk": "low",
+    "policy": "passive_monitoring",
+    "level": 1
+  },
+  "30474d1c339d": {
+    "intent": "adaptive_response",
+    "risk": "critical",
+    "policy": "terminate",
+    "level": 4
+  }
+}

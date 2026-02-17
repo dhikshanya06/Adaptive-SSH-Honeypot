@@ -51,6 +51,48 @@ class Command_ssh(HoneyPotCommand):
             return True
 
     def start(self) -> None:
+        # --- RL INTEGRATION ---
+        from cowrie.adaptive.rl_agent import rl_agent
+        session_id = self.protocol.sessionno
+        action = rl_agent.current_action.get(session_id, 0)
+
+        if action == 2:
+            self.write("Connected to internal-db-server.\n")
+            self.exit()
+            return
+
+        # 3: fake_error (Connection Refused)
+        elif action == 3:
+            self.write(f"ssh: connect to host {self.args[0] if self.args else 'target'} port 22: Connection refused\n")
+            self.exit()
+            return
+
+        # 4: escalate_deception (Honeypot within Honeypot?)
+        elif action == 4:
+             self.write("Security monitoring activated.\n")
+             self.exit()
+             return
+
+        # 5: terminate_session
+        elif action == 5:
+            self.protocol.transport.loseConnection()
+            return
+            
+        # 1: add_delay
+        elif action == 1:
+            import time
+            time.sleep(2.0)
+            # Fall through
+
+        # -------- NORMAL BEHAVIOR (Action 0) --------
+        # User spec:
+        # Connecting to 192.168.1.10...
+        
+        host = self.args[0] if self.args else "target"
+        self.write(f"Connecting to {host}...\n")
+        self.exit()
+        return
+
         try:
             options = "-1246AaCfgKkMNnqsTtVvXxYb:c:D:e:F:i:L:l:m:O:o:p:R:S:w:"
             optlist, args = getopt.getopt(self.args, options)

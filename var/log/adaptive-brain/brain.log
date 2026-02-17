@@ -1,0 +1,24 @@
+test write
+{"timestamp": "2026-02-15T09:51:14", "session_id": "4b3e29dfb8b3", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T09:51:22", "session_id": "4b3e29dfb8b3", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T09:51:28", "session_id": "4b3e29dfb8b3", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T09:59:14", "session_id": "67f0e53ca2b1", "analysis": {"intent": "reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T09:59:14", "session_id": "67f0e53ca2b1", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception"}}
+{"timestamp": "2026-02-15T10:00:00", "session_id": "2be72d080036", "analysis": {"intent": "reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:00:00", "session_id": "2be72d080036", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception"}}
+{"timestamp": "2026-02-15T10:23:48", "session_id": "53d8e40aed8e", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:23:49", "session_id": "53d8e40aed8e", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:23:53", "session_id": "53d8e40aed8e", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:23:54", "session_id": "53d8e40aed8e", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:23:56", "session_id": "53d8e40aed8e", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:23:57", "session_id": "53d8e40aed8e", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:25:04", "session_id": "53d8e40aed8e", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:25:04", "session_id": "53d8e40aed8e", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception"}}
+{"timestamp": "2026-02-15T10:25:06", "session_id": "53d8e40aed8e", "analysis": {"intent": "Reconnaissance", "risk": "low", "policy": "passive_monitoring"}}
+{"timestamp": "2026-02-15T10:25:06", "session_id": "53d8e40aed8e", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception"}}
+{"timestamp": "2026-02-15T12:42:04", "session_id": "3d3027c4f283", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception", "level": 4}}
+{"timestamp": "2026-02-15T12:42:06", "session_id": "e2abd9b44127", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception", "level": 4}}
+{"timestamp": "2026-02-15T12:42:08", "session_id": "84b5020e3931", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception", "level": 4}}
+{"timestamp": "2026-02-15T12:46:49", "session_id": "acd9cad971e2", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception", "level": 4}}
+{"timestamp": "2026-02-15T12:46:51", "session_id": "b1d8e3559440", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception", "level": 4}}
+{"timestamp": "2026-02-15T12:46:54", "session_id": "70cd8e70c78e", "analysis": {"intent": "Credential Theft / Honeytoken Access", "risk": "critical", "policy": "aggressive_deception", "level": 4}}

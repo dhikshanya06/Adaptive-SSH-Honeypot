@@ -1,0 +1,17 @@
+nohup: ignoring input
+
+============================================================
+  LIVE ADAPTIVE CONTROLLER :: MONITORING ACTIVE SESSIONS
+============================================================
+
+[RL] Model loaded from q_table.pkl
+[*] Monitoring Log Base: /home/dhikshanya06/Adaptive-SSH-Honeypot/var/log/cowrie
+[+] Success: Found log file at /home/dhikshanya06/Adaptive-SSH-Honeypot/var/log/cowrie/cowrie.json
+[+] Tail started. Waiting for new events...
+[!!!] CRITICAL ALERT: 8d461c7d0a42 accessed .aws_backup_keys.txt (cloud)
+[DEFENSE] 8d461c7d0a42: Injecting fake AWS permission error logs
+   [ACTIVITY] 8d461c7d0a42: Command 'ls; ls; ls; cat .aws_backup_keys.txt'
+   [RL AGENT] State Detected -> Action: normal_response (0)
+   [!!!] CRTICAL ALERT: Session 8d461c7d0a42 triggered honeytoken .aws_backup_keys.txt
+[...] Waiting for events... (22:13:29)
+[...] Waiting for events... (22:13:59)

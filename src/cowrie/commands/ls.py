@@ -3,10 +3,8 @@ from __future__ import annotations
 import getopt
 import time
 
-from twisted.internet import reactor, defer
-
-from cowrie.shell import fs
 from cowrie.shell.command import HoneyPotCommand
+from cowrie.adaptive.rl_agent import rl_agent
 
 commands = {}
 
@@ -14,9 +12,42 @@ commands = {}
 class Command_ls(HoneyPotCommand):
 
     def start(self) -> None:
-        self.path = self.protocol.cwd
-        self.showHidden = False
-        self.longFormat = False
+
+        session_id = self.protocol.sessionno
+        action = rl_agent.current_action.get(session_id, 0)
+
+        # =========================
+        # RL ACTION OVERRIDES
+        # =========================
+
+        if action == 1:  # add_delay
+            time.sleep(2)
+
+        elif action == 2:  # inject_fake_file
+            self.write("passwords.txt  backup.tar.gz  secrets.db\n")
+            self.exit()
+            return
+
+        elif action == 3:  # fake_error
+            self.write("ls: cannot access: Permission denied\n")
+            self.exit()
+            return
+
+        elif action == 4:  # escalate_deception
+            self.write("passwords.txt  admin_backup.zip  logs  database_dump.sql\n")
+            self.exit()
+            return
+
+        elif action == 5:  # terminate_session
+            self.protocol.transport.loseConnection()
+            return
+
+        # =========================
+        # NORMAL BEHAVIOR
+        # =========================
+
+        show_hidden = False
+        long_format = False
 
         try:
             opts, args = getopt.gnu_getopt(self.args, "al", [])
@@ -26,96 +57,34 @@ class Command_ls(HoneyPotCommand):
 
         for o, _ in opts:
             if o == "-a":
-                self.showHidden = True
+                show_hidden = True
             elif o == "-l":
-                self.longFormat = True
+                long_format = True
 
-        if args:
-            self.path = self.protocol.fs.resolve_path(args[0], self.protocol.cwd)
+        # Base file list
+        files = ["passwords.txt"]
 
-        # Per-session ls counter
-        if not hasattr(self.protocol, "_ls_count"):
-            self.protocol._ls_count = 0
-        self.protocol._ls_count += 1
+        # Hidden files
+        hidden_files = [
+            ".aptitude",
+            ".aws_backup_keys.txt",
+            ".bashrc",
+            ".profile",
+            ".ssh"
+        ]
 
-        self.ensure_files(self.path)
+        if show_hidden:
+            files = hidden_files + files
 
-        # ✅ DELAY LOGIC (VISIBLE)
-        delay = 0
-        if self.protocol._ls_count >= 3:
-            delay = 2.5  # seconds
-
-        d = defer.Deferred()
-        reactor.callLater(delay, d.callback, None)
-        d.addCallback(self.render_ls)
-
-    # --------------------------------------------------
-
-    def ensure_files(self, path: str) -> None:
-        if path != "/root":
-            return
-
-        self._ensure_file(
-            "README.txt",
-            b"Internal backup server\nFor authorized maintenance only\n",
-        )
-
-        if self.protocol._ls_count >= 2:
-            self._ensure_file("backup.tar.gz", b"\x00" * 512)
-
-        if self.protocol._ls_count >= 3:
-            self._ensure_file(
-                "notes.txt",
-                b"Backup schedule: Sunday 02:00 UTC\n",
-            )
-
-        if self.showHidden:
-            self._ensure_file(
-                ".db_creds",
-                b"DB_USER=admin\nDB_PASS=changeme123\n",
-            )
-
-    # --------------------------------------------------
-
-    def _ensure_file(self, name: str, content: bytes) -> None:
-        fullpath = self.protocol.fs.resolve_path(name, self.protocol.cwd)
-        if self.protocol.fs.exists(fullpath):
-            return
-
-        self.protocol.fs.mkfile(
-            fullpath,
-            self.protocol.user.uid,
-            self.protocol.user.gid,
-            len(content),
-            33188,
-        )
-
-        f = self.protocol.fs.getfile(fullpath)
-        f[fs.A_CONTENTS] = content
-        f[fs.A_SIZE] = len(content)
-
-    # --------------------------------------------------
-
-    def render_ls(self, _ignored) -> None:
-        files = self.protocol.fs.get_path(self.path)[:]
-
-        if not self.showHidden:
-            files = [f for f in files if not f[fs.A_NAME].startswith(".")]
-
-        files.sort(key=lambda x: x[fs.A_NAME])
-
-        if self.longFormat:
+        # If long format
+        if long_format:
             for f in files:
-                ctime = time.strftime(
-                    "%Y-%m-%d %H:%M",
-                    time.localtime(f[fs.A_CTIME]),
-                )
                 self.write(
-                    f"-rw-r--r-- 1 root root {f[fs.A_SIZE]} {ctime} {f[fs.A_NAME]}\n"
+                    f"-rw-r--r-- 1 root root 4096 Jan 01 12:00 {f}\n"
                 )
         else:
             for f in files:
-                self.write(f"{f[fs.A_NAME]}  ")
+                self.write(f + "  ")
             self.write("\n")
 
         self.exit()

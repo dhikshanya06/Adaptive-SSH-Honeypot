@@ -1,0 +1,14 @@
+[*] Launching Live Adaptive Controller using cowrie-env...
+
+============================================================
+  LIVE ADAPTIVE CONTROLLER :: MONITORING ACTIVE SESSIONS
+============================================================
+
+Traceback (most recent call last):
+  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/src/cowrie/adaptive/live_adaptive_controller.py", line 240, in <module>
+    controller = LiveController()
+  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/src/cowrie/adaptive/live_adaptive_controller.py", line 70, in __init__
+    self.policy_engine = PolicyEngine()
+  File "/home/dhikshanya06/Adaptive-SSH-Honeypot/src/cowrie/adaptive/policy/policy_engine.py", line 8, in __new__
+    cls._instance.policy_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../../../var/lib/cowrie/session_policies.json")
+NameError: name 'os' is not defined
