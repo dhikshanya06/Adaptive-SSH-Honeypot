@@ -1,3 +1,11 @@
-honeyfs/home/admin/.gcp_service_account.json
-honeyfs/home/admin/.env.production
-*.env
+__pycache__/
+*.pyc
+*.pyo
+*.pkl
+var/log/
+var/lib/cowrie/tty/
+var/run/
+*.backup
+cowrie-env/
+.env
+.env
