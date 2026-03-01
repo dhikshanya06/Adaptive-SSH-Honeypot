@@ -470,11 +470,27 @@ class HoneyPotShell:
                     )
                     lastpp = pp
             else:
-                # Command not found
-                message = "-bash: {}: command not found\n".format(
+                # LLM handles unknown commands
+                try:
+                    from cowrie.adaptive.llm_handler import get_llm_response
+                    if not hasattr(self.protocol, 'llm_history'):
+                        self.protocol.llm_history = []
+                    command_str = cmd["command"] + " " + " ".join(
+                        str(a) for a in cmd.get("rargs", [])
+                    )
+                    llm_response = get_llm_response(
+                        command_str, self.protocol.llm_history
+                    )
+                    self.protocol.llm_history.append(
+                        (command_str, llm_response)
+                    )
+                    if len(self.protocol.llm_history) > 10:
+                        self.protocol.llm_history.pop(0)
+                    message = (llm_response + "\n").encode("utf8")
+                except Exception as e:
+                    message = "-bash: {}: command not found\n".format(
                         cmd["command"]
                     ).encode("utf8")
-
                 redirects = cmd.get("redirects", [])
                 if redirects:
                     temp_pp = PipeProtocol(

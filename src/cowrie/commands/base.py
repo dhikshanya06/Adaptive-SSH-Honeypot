@@ -311,6 +311,12 @@ class Command_ps(HoneyPotCommand):
                     output_array.append(output)
 
             # Build output string from array
+            # Fix: ensure all items are strings not tuples
+            output_array = [
+                "\t".join(str(x) for x in item) if isinstance(item, tuple)
+                else str(item)
+                for item in output_array
+            ]
             output_str = "\n".join(output_array)
             
             # Apply adaptive behavior: filter sensitive processes on repeated access
