@@ -472,26 +472,87 @@ class HoneyPotShell:
                     )
                     lastpp = pp
             else:
-                # LLM handles unknown commands
+                # RL agent decides action, LLM generates response
                 try:
+                    from cowrie.adaptive.rl_agent import rl_agent
                     from cowrie.adaptive.llm_handler import get_llm_response
-                    if not hasattr(self.protocol, 'llm_history'):
-                        self.protocol.llm_history = []
-                    command_str = cmd["command"] + " " + " ".join(
+
+                    # Build state
+                    cmd_str = cmd["command"] + " " + " ".join(
                         str(a) for a in cmd.get("rargs", [])
                     )
-                    llm_response = get_llm_response(
-                        command_str, self.protocol.llm_history
-                    )
-                    self.protocol.llm_history.append(
-                        (command_str, llm_response)
-                    )
-                    if len(self.protocol.llm_history) > 10:
-                        self.protocol.llm_history.pop(0)
-                    message = (llm_response + "\n").encode("utf8")
+                    if not hasattr(self.protocol, 'cmd_count'):
+                        self.protocol.cmd_count = 0
+                    self.protocol.cmd_count += 1
+                    count = self.protocol.cmd_count
+
+                    c = cmd["command"].lower()
+                    if c in ("ls", "pwd"): cat = 0
+                    elif c in ("cat", "aws"): cat = 1
+                    elif c in ("sudo", "chmod"): cat = 2
+                    elif c in ("rm", "wget"): cat = 3
+                    else: cat = 0
+
+                    honeytokens = [".aws_backup_keys", "db_admin_passwords", "root_private_key", "backup_credentials"]
+                    hflag = 1 if any(t in cmd_str for t in honeytokens) else 0
+                    bucket = 0 if count < 5 else (1 if count < 15 else 2)
+                    state = (cat, hflag, bucket, cat if not hflag else 3)
+
+                    # RL selects action
+                    action = rl_agent.select_action(state)
+                    self.protocol._rl_action = action
+                    self.protocol._rl_state = state
+                    actions = rl_agent.actions
+
+                    print(f"[RL] Action: {actions[action]} for cmd: {cmd_str}", flush=True)
+
+                    # Execute based on action
+                    if action == 0:  # normal_response - use LLM
+                        if not hasattr(self.protocol, 'llm_history'):
+                            self.protocol.llm_history = []
+                        llm_response = get_llm_response(cmd_str, self.protocol.llm_history)
+                        self.protocol.llm_history.append((cmd_str, llm_response))
+                        if len(self.protocol.llm_history) > 10:
+                            self.protocol.llm_history.pop(0)
+                        message = (llm_response + "\n").encode("utf8")
+
+                    elif action == 1:  # add_delay
+                        import time
+                        time.sleep(2)
+                        if not hasattr(self.protocol, 'llm_history'):
+                            self.protocol.llm_history = []
+                        llm_response = get_llm_response(cmd_str, self.protocol.llm_history)
+                        self.protocol.llm_history.append((cmd_str, llm_response))
+                        message = (llm_response + "\n").encode("utf8")
+
+                    elif action == 2:  # inject_fake_file
+                        message = f"{cmd_str}: Permission denied\n".encode("utf8")
+
+                    elif action == 3:  # fake_error
+                        message = f"-bash: {cmd['command']}: command not found\n".encode("utf8")
+
+                    elif action == 4:  # escalate_deception
+                        message = b"Segmentation fault (core dumped)\n"
+
+                    elif action == 5:  # terminate_session
+                        message = b"Connection closed by remote host.\n"
+                        self.protocol.terminal.loseConnection()
+
+                    else:
+                        message = f"-bash: {cmd['command']}: command not found\n".encode("utf8")
+
+                    # RL update
+                    reward = rl_agent.compute_reward(type('obj', (object,), {
+                        'command_name': cmd['command'],
+                        'args': cmd.get('rargs', []),
+                        'protocol': self.protocol
+                    })())
+                    next_state = state
+                    rl_agent.update(state, action, reward, next_state)
+
                 except Exception as e:
                     import traceback
-                    print(f"[LLM ERROR] {e}", flush=True)
+                    print(f"[RL/LLM ERROR] {e}", flush=True)
                     traceback.print_exc()
                     message = "-bash: {}: command not found\n".format(
                         cmd["command"]
