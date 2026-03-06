@@ -1,0 +1,4 @@
+server_backup_2024-11-01.tar.gz
+  home/admin/db_backup.sql
+  home/admin/.credentials.txt
+  etc/app/config.yml

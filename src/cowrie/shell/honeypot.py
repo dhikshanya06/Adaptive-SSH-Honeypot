@@ -19,6 +19,7 @@ from cowrie.core.config import CowrieConfig
 from cowrie.shell import fs
 from cowrie.shell.parser import CommandParser
 from cowrie.shell.pipe import PipeProtocol
+from cowrie.adaptive.engagement_engine import engagement_engine
 
 # Pre-compiled regexes for environment variable expansion
 _ENV_BRACE_RE = re.compile(r"^\${([_a-zA-Z0-9]+)}$")
@@ -46,6 +47,7 @@ class HoneyPotShell:
 
     def lineReceived(self, line: str) -> None:
         log.msg(eventid="cowrie.command.input", input=line, format="CMD: %(input)s")
+        engagement_engine.check_and_plant(line)
         self.lexer = shlex.shlex(instream=line, punctuation_chars=True, posix=True)
         # Add these special characters that are not in the default lexer
         self.lexer.wordchars += "@%{}=$:+^,()`"
@@ -488,6 +490,9 @@ class HoneyPotShell:
                         self.protocol.llm_history.pop(0)
                     message = (llm_response + "\n").encode("utf8")
                 except Exception as e:
+                    import traceback
+                    print(f"[LLM ERROR] {e}", flush=True)
+                    traceback.print_exc()
                     message = "-bash: {}: command not found\n".format(
                         cmd["command"]
                     ).encode("utf8")

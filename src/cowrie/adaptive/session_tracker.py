@@ -1,37 +1,16 @@
-
-# DUMMY SESSION TRACKER
-# Restored to satisfy imports in legacy command files
-# The real logic is handled by live_adaptive_controller.py
-
-class SessionTracker:
-    _instance = None
-    
-    def __init__(self):
-        self.state = {
-            "command_counts": {}
-        }
-
-    @classmethod
-    def get_instance(cls):
-        if cls._instance is None:
-            cls._instance = SessionTracker()
-        return cls._instance
-
-    def record_command(self, session_id, command, category):
-        # Return a dummy state to keep command files happy
-        # counts default to 1 so usage checks (e.g. if count < 3) don't crash
-        return {
-            "command_counts": {
-                command: 1
-            }
-        }
-
-sessions = {}
-
-def increase_suspicion(session_id):
-    if session_id not in sessions:
-        sessions[session_id] = 0
-    sessions[session_id] += 5
+def increase_suspicion(session_id, amount=1):
+    pass
 
 def get_suspicion(session_id):
-    return sessions.get(session_id, 0)
+    return 0
+
+class SessionTracker:
+    def __init__(self):
+        self.sessions = {}
+    def track(self, session_id):
+        if session_id not in self.sessions:
+            self.sessions[session_id] = {"suspicion": 0, "commands": []}
+    def add_command(self, session_id, command):
+        self.track(session_id)
+        self.sessions[session_id]["commands"].append(command)
+session_tracker = SessionTracker()

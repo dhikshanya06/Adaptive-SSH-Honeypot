@@ -71,3 +71,58 @@ class SkillDetector:
             print(f"Alert log error: {e}")
 
 skill_detector = SkillDetector()
+
+
+if __name__ == "__main__":
+    import json
+    log_file = "var/log/cowrie/cowrie.json"
+    detector = SkillDetector()
+    sessions = {}
+    session_commands_map = {}
+
+    try:
+        with open(log_file, 'r') as f:
+            for line in f:
+                try:
+                    event = json.loads(line)
+                    if event.get('eventid') == 'cowrie.command.input':
+                        sid = event.get('session', 'unknown')
+                        cmd = event.get('input', '')
+                        src_ip = event.get('src_ip', 'unknown')
+                        sessions[sid] = src_ip
+                        if sid not in session_commands_map:
+                            session_commands_map[sid] = []
+                        session_commands_map[sid].append(cmd)
+                        detector.analyze_command(sid, cmd)
+                except:
+                    pass
+    except Exception as e:
+        print(f"Error reading log: {e}")
+
+    print()
+    print("=" * 70)
+    print("           ATTACKER SKILL DETECTION REPORT")
+    print("=" * 70)
+
+    skill_order = {'EXPERT': 0, 'INTERMEDIATE': 1, 'SCRIPT_KIDDIE': 2}
+    skill_emoji = {'EXPERT': '🔴 EXPERT', 'INTERMEDIATE': '🟡 INTERMEDIATE', 'SCRIPT_KIDDIE': '🟢 SCRIPT KIDDIE'}
+
+    filtered = {sid: skill for sid, skill in detector.session_skills.items() if skill != 'UNKNOWN'}
+    sorted_sessions = sorted(filtered.items(), key=lambda x: skill_order.get(x[1], 99))
+
+    for i, (sid, skill) in enumerate(sorted_sessions, 1):
+        ip = sessions.get(sid, 'unknown')
+        cmds = session_commands_map.get(sid, [])
+        print(f"\n[{i}] Session  : {sid[:12]}...")
+        print(f"    IP       : {ip}")
+        print(f"    Skill    : {skill_emoji.get(skill, skill)}")
+        print(f"    Commands : {len(cmds)}")
+        print(f"    History  : {' → '.join(cmds[:8])}")
+        print(f"    {'-'*60}")
+
+    print()
+    print("SUMMARY:")
+    for skill in ['EXPERT', 'INTERMEDIATE', 'SCRIPT_KIDDIE']:
+        count = sum(1 for s in filtered.values() if s == skill)
+        print(f"  {skill_emoji.get(skill, skill)}: {count} session(s)")
+    print("=" * 70)
