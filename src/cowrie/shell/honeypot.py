@@ -507,23 +507,36 @@ class HoneyPotShell:
                     print(f"[RL] Action: {actions[action]} for cmd: {cmd_str}", flush=True)
 
                     # Execute based on action
-                    if action == 0:  # normal_response - use LLM
-                        if not hasattr(self.protocol, 'llm_history'):
-                            self.protocol.llm_history = []
-                        llm_response = get_llm_response(cmd_str, self.protocol.llm_history)
-                        self.protocol.llm_history.append((cmd_str, llm_response))
+                    if not hasattr(self.protocol, 'llm_history'):
+                        self.protocol.llm_history = []
+
+                    if action in (0, 1):  # normal_response or add_delay - LLM picks best of 3
+                        if action == 1:
+                            import time
+                            time.sleep(2)
+
+                        # Generate 3 candidate responses
+                        candidates = []
+                        for _ in range(3):
+                            resp = get_llm_response(cmd_str, self.protocol.llm_history)
+                            candidates.append(resp)
+
+                        # RL scores each candidate by length + keyword signals
+                        def score_response(r):
+                            score = len(r) * 0.1
+                            if any(k in r.lower() for k in ["error", "not found", "denied"]):
+                                score -= 5
+                            if any(k in r.lower() for k in ["root", "admin", "password", "key"]):
+                                score += 10
+                            return score
+
+                        best = max(candidates, key=score_response)
+                        print(f"[RL] Picked best of 3 LLM responses (scores: {[round(score_response(c),1) for c in candidates]})", flush=True)
+
+                        self.protocol.llm_history.append((cmd_str, best))
                         if len(self.protocol.llm_history) > 10:
                             self.protocol.llm_history.pop(0)
-                        message = (llm_response + "\n").encode("utf8")
-
-                    elif action == 1:  # add_delay
-                        import time
-                        time.sleep(2)
-                        if not hasattr(self.protocol, 'llm_history'):
-                            self.protocol.llm_history = []
-                        llm_response = get_llm_response(cmd_str, self.protocol.llm_history)
-                        self.protocol.llm_history.append((cmd_str, llm_response))
-                        message = (llm_response + "\n").encode("utf8")
+                        message = (best + "\n").encode("utf8")
 
                     elif action == 2:  # inject_fake_file
                         message = f"{cmd_str}: Permission denied\n".encode("utf8")
