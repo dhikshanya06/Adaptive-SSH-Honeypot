@@ -4,8 +4,11 @@ from datetime import datetime
 
 def generate_report():
     log_file = "var/log/cowrie/cowrie.json"
-    sessions = {}
+    if not os.path.exists(log_file):
+        print("[REPORT] Log file not found")
+        return
 
+    sessions = {}
     with open(log_file) as f:
         for line in f:
             try:
@@ -14,19 +17,25 @@ def generate_report():
                 if not sid:
                     continue
                 if sid not in sessions:
-                    sessions[sid] = {"src_ip": e.get("src_ip","unknown"), "commands": [], "duration": 0, "skill_level": "UNKNOWN"}
+                    sessions[sid] = {
+                        "src_ip": e.get("src_ip", "unknown"),
+                        "commands": [],
+                        "duration": 0,
+                        "skill_level": "UNKNOWN",
+                        "timestamp": e.get("timestamp", "")
+                    }
                 if e.get("eventid") == "cowrie.command.input":
-                    sessions[sid]["commands"].append(e.get("input",""))
+                    sessions[sid]["commands"].append(e.get("input", ""))
                 if e.get("eventid") == "cowrie.session.closed":
-                    sessions[sid]["duration"] = float(e.get("duration", 0))
+                    sessions[sid]["duration"] = float(e.get("duration", 0) or 0)
                 if e.get("eventid") == "cowrie.login.success":
-                    sessions[sid]["src_ip"] = e.get("src_ip","unknown")
+                    sessions[sid]["src_ip"] = e.get("src_ip", "unknown")
             except:
                 pass
 
-    # Detect skill
-    expert_cmds = ["nmap","tcpdump","strace","ltrace","gdb","wireshark","metasploit","iptables","/proc/","ptrace"]
-    intermediate_cmds = ["netstat","ss -","find / -perm","cat /etc/shadow","cat /etc/passwd","sudo -l","crontab","wget","curl","chmod +x","base64","python -c","perl -e"]
+    expert_cmds = ["nmap","tcpdump","strace","gdb","metasploit","iptables","/proc/","ptrace"]
+    intermediate_cmds = ["netstat","find / -perm","cat /etc/shadow","sudo -l","crontab",
+                         "wget","curl","chmod +x","base64","python -c","perl -e"]
     kiddie_cmds = ["whoami","id","uname","ls","pwd","echo","hostname"]
 
     for sid, info in sessions.items():
@@ -38,42 +47,53 @@ def generate_report():
         elif info["commands"]:
             info["skill_level"] = "SCRIPT_KIDDIE"
 
-    # Filter valid sessions
-    valid = [s for s in sessions.values() if s["skill_level"] != "UNKNOWN" and s["duration"] > 2]
+    valid = [s for s in sessions.values() if s["skill_level"] != "UNKNOWN"]
     valid.sort(key=lambda x: x["duration"], reverse=True)
 
-    skill_emoji = {"EXPERT": "🔴 EXPERT", "INTERMEDIATE": "🟡 INTERMEDIATE", "SCRIPT_KIDDIE": "🟢 SCRIPT KIDDIE"}
+    skill_emoji = {
+        "EXPERT": "🔴 EXPERT",
+        "INTERMEDIATE": "🟡 INTERMEDIATE",
+        "SCRIPT_KIDDIE": "🟢 SCRIPT KIDDIE"
+    }
 
-    # Save report
     os.makedirs("var/log/cowrie/reports", exist_ok=True)
     report_file = f"var/log/cowrie/reports/attack_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
 
-    print()
-    print("=" * 70)
-    print("           ATTACK SESSION REPORT")
-    print("=" * 70)
+    lines = []
+    lines.append("=" * 60)
+    lines.append("       ADAPTIVE SSH HONEYPOT - ATTACK REPORT")
+    lines.append(f"       Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    lines.append("=" * 60)
+    lines.append(f"\nTotal Sessions Analyzed: {len(valid)}")
 
-    for i, info in enumerate(valid, 1):
-        skill = info["skill_level"]
-        score = min(100, len(info["commands"]) * 5 + int(info["duration"] / 10))
-        print(f"\n[{i}] IP Address  : {info['src_ip']}")
-        print(f"    Skill Level : {skill_emoji.get(skill, skill)}")
-        print(f"    Duration    : {info['duration']:.0f} seconds")
-        print(f"    Commands    : {len(info['commands'])}")
-        if info["commands"]:
-            print(f"    History     : {chr(32).join(['→' + c for c in info['commands'][:6]])}")
-        print(f"    Deception   : {score}/100")
-        print(f"    {'-'*55}")
+    skill_counts = {"EXPERT": 0, "INTERMEDIATE": 0, "SCRIPT_KIDDIE": 0}
+    for s in valid:
+        skill_counts[s["skill_level"]] = skill_counts.get(s["skill_level"], 0) + 1
 
-    print()
-    print("SUMMARY:")
-    print(f"  Total Sessions : {len(valid)}")
-    avg = sum(s["duration"] for s in valid) / max(len(valid), 1)
-    print(f"  Avg Duration   : {avg:.0f} seconds")
-    print(f"  Expert         : {sum(1 for s in valid if s['skill_level'] == 'EXPERT')}")
-    print(f"  Intermediate   : {sum(1 for s in valid if s['skill_level'] == 'INTERMEDIATE')}")
-    print(f"  Script Kiddie  : {sum(1 for s in valid if s['skill_level'] == 'SCRIPT_KIDDIE')}")
-    print("=" * 70)
-    print(f"\n✅ Report saved: {report_file}")
+    lines.append(f"🔴 Expert Attackers:       {skill_counts['EXPERT']}")
+    lines.append(f"🟡 Intermediate Attackers: {skill_counts['INTERMEDIATE']}")
+    lines.append(f"🟢 Script Kiddies:         {skill_counts['SCRIPT_KIDDIE']}")
+    lines.append("\n" + "=" * 60)
+    lines.append("TOP SESSIONS BY DURATION")
+    lines.append("=" * 60)
 
-generate_report()
+    for i, s in enumerate(valid[:10]):
+        lines.append(f"\n[{i+1}] IP: {s['src_ip']}")
+        lines.append(f"    Skill: {skill_emoji.get(s['skill_level'], s['skill_level'])}")
+        lines.append(f"    Duration: {s['duration']:.1f}s")
+        lines.append(f"    Commands ({len(s['commands'])}):")
+        for cmd in s['commands'][:5]:
+            lines.append(f"      $ {cmd}")
+        if len(s['commands']) > 5:
+            lines.append(f"      ... and {len(s['commands'])-5} more")
+
+    report_text = "\n".join(lines)
+    with open(report_file, "w") as f:
+        f.write(report_text)
+
+    print(report_text)
+    print(f"\n[REPORT] Saved to {report_file}")
+    return report_file
+
+if __name__ == "__main__":
+    generate_report()
