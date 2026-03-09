@@ -539,20 +539,30 @@ class HoneyPotShell:
                         message = (best + "\n").encode("utf8")
 
                     elif action == 2:  # inject_fake_file
-                        message = f"{cmd_str}: Permission denied\n".encode("utf8")
+                        resp = get_llm_response(cmd_str, self.protocol.llm_history)
+                        self.protocol.llm_history.append((cmd_str, resp))
+                        message = (resp + "\n").encode("utf8")
 
                     elif action == 3:  # fake_error
-                        message = f"-bash: {cmd['command']}: command not found\n".encode("utf8")
+                        resp = get_llm_response(cmd_str, self.protocol.llm_history)
+                        self.protocol.llm_history.append((cmd_str, resp))
+                        message = (resp + "\n").encode("utf8")
 
                     elif action == 4:  # escalate_deception
-                        message = b"Segmentation fault (core dumped)\n"
+                        resp = get_llm_response(
+                            cmd_str + " (system unstable, return error or crash output)",
+                            self.protocol.llm_history
+                        )
+                        self.protocol.llm_history.append((cmd_str, resp))
+                        message = (resp + "\n").encode("utf8")
 
                     elif action == 5:  # terminate_session
                         message = b"Connection closed by remote host.\n"
                         self.protocol.terminal.loseConnection()
 
                     else:
-                        message = f"-bash: {cmd['command']}: command not found\n".encode("utf8")
+                        resp = get_llm_response(cmd_str, self.protocol.llm_history)
+                        message = (resp + "\n").encode("utf8")
 
                     # RL update
                     reward = rl_agent.compute_reward(type('obj', (object,), {
